@@ -76,7 +76,7 @@ public class ConsoleUi implements Iui{
                         case "run mutation -bayes": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga z uwzglednienim bayesa
 
                            int Bayesit =0;
-                           while(Bayesit<20){
+                           while(Bayesit<1){
                                FromFileMetaData tempDataLocal_bayes =new FromFileMetaData(true);
                                for (FromFileMetaData data:tempDataLocal_bayes.GetMetaDataAsAList()) {
                                    System.out.println(".");
