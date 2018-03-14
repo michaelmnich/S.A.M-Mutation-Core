@@ -140,6 +140,27 @@ public class MutationCoverage {
     final MutationAnalysisExecutor mae = new MutationAnalysisExecutor(
         numberOfThreads(), config);
     this.timings.registerStart(Timings.Stage.RUN_MUTATION_TESTS);
+    //if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains(cr.getTestUnitDescription().toString()))
+
+    Set<ClassName> newCt = new HashSet<>();
+
+
+    for (MutationAnalysisUnit unit:  tus )
+    {
+      MutationTestUnit tempunit = (MutationTestUnit) unit;
+      for (ClassName ct: tempunit.testClasses) {//filtrowanie testów które nie przeszły
+        // ct.toString()
+        if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains( ct.toString())){
+        //  System.out.println("TEST : "+ ct.toString() +" FAIL ------------ Removed. Reason Red siute -------");
+          newCt.add(ct);
+        }else{
+          System.out.println("TEST : "+ ct.toString() +" FAIL ------------ Removed. Reason Red siute -------");
+        }
+      }
+      tempunit.testClasses= newCt;
+    }
+    //MutationTestUnit
+
     mae.run(tus);
     this.timings.registerEnd(Timings.Stage.RUN_MUTATION_TESTS);
 
@@ -257,6 +278,15 @@ public class MutationCoverage {
         this.data.getNumberOfThreads(), this.data.getMutationUnitSize());
     final MutationTestBuilder builder = new MutationTestBuilder(wf, analyser,
         source, grouper);
+//    Set<ClassName> newCt = new HashSet<>();
+//    for (ClassName ct: this.code.getCodeUnderTestNames()) {//filtrowanie testów które nie przeszły
+//     // ct.toString()
+//      if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains( ct.toString())){
+//        newCt.add(ct);
+//      }else{
+//        System.out.println("TEST : "+ ct.toString() +" FAIL ------------ Removed. Reason Red siute -------");
+//      }
+//    }
 
     return builder.createMutationTestUnits(this.code.getCodeUnderTestNames());
   }
