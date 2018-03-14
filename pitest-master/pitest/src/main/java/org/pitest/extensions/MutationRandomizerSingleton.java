@@ -28,7 +28,7 @@ public class MutationRandomizerSingleton {
     private List<MutatorsNames> mutansNames;
 
    // private BlockReportListner blockListner;
-
+    public List<String> FailedTsests;
     //Bayses------
     double _alpha=Double.NaN;
     double _betha=Double.NaN;
@@ -43,7 +43,7 @@ public class MutationRandomizerSingleton {
      */
     private MutationRandomizerSingleton() {
         // Exists only to defeat instantiation.
-
+        FailedTsests = new ArrayList<String>();
         mutansNames = new ArrayList<MutatorsNames>(Arrays.asList(
                 new MutatorsNames ("INVERT_NEGS", "org.pitest.mutationtest.engine.gregor.mutators.InvertNegsMutator"),
                 new MutatorsNames ("RETURN_VALS", "org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator"),

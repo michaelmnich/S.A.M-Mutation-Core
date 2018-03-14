@@ -34,6 +34,12 @@ public class WebSocketWorkerNode implements  ISerwer, SocketListener  {
     public void RunnPitStandAlone(IProjectMetaData metaData){
         System.out.println("SAM: INFO: Stand Alone Mutation request ");
         System.out.println("Start Mutation coverage-----------------------");
+        System.out.println("Project Data----------------------------------");
+        for (String item : metaData.GetMetaData()) {
+            System.out.println(item+System.getProperty("line.separator"));
+        }
+        System.out.println("Project Data----------------------------------");
+
         System.out.println("INFO: Starting mutation coverage");
         _pitRunner.RunnMutation(metaData);
     }

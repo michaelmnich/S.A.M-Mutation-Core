@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 import org.pitest.classinfo.ClassInfo;
 import org.pitest.classinfo.ClassName;
 import org.pitest.classpath.CodeSource;
+import org.pitest.extensions.MutationRandomizerSingleton;
 import org.pitest.functional.F;
 import org.pitest.functional.F2;
 import org.pitest.functional.FCollection;
@@ -227,9 +228,12 @@ public class CoverageData implements CoverageDatabase {
 
   private void checkForFailedTest(final CoverageResult cr) {
     if (!cr.isGreenTest()) {
-      recordTestFailure();
+     // recordTestFailure();
+    if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains(cr.getTestUnitDescription().toString()))
+      MutationRandomizerSingleton.getInstance().FailedTsests.add(cr.getTestUnitDescription().GetTestClass_name());
       LOG.warning(cr.getTestUnitDescription()
           + " did not pass without mutation.");
+      System.out.println("Fail ----  "+ cr.getTestUnitDescription().GetTestClass_name());
     }
   }
 

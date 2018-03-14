@@ -34,7 +34,7 @@ public class MutationTestUnit implements MutationAnalysisUnit {
   private final Collection<MutationDetails> availableMutations;
   private final WorkerFactory               workerFactory;
 
-  private final Collection<ClassName>       testClasses;
+  public Collection<ClassName>       testClasses;
 
   public MutationTestUnit(final Collection<MutationDetails> availableMutations,
       final Collection<ClassName> testClasses, final WorkerFactory workerFactor) {

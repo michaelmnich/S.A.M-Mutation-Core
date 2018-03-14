@@ -102,4 +102,8 @@ public final class Description {
         + "]";
   }
 
+  public String GetTestClass_name(){
+    return this.testClass;
+  }
+
 }
