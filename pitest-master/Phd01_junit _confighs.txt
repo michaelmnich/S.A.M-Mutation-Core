@@ -1,0 +1,29 @@
+Dla wersji 412----------------------------------------------------------
+
+--classPath
+D:\\Workspace\\Katalogi412\\target\\test-classes\\,D:\\Workspace\\Katalogi412\\target\\classes\\
+--reportDir
+E:\\trash\\
+--targetClasses
+org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+--targetTests
+org.junit.tests.AllTests
+--sourceDirs
+D:\\Workspace\\Katalogi412\\
+
+
+Dla wersji 411----------------------------------------------------------
+
+--classPath
+D:\\Workspace\\Katalogi411\\target\\test\\java\\,D:\\Workspace\\Katalogi411\\target\\main\\
+--reportDir
+E:\\trash\\
+--targetClasses
+org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+--targetTests
+org.junit.tests.AllTests
+--sourceDirs
+D:\\Workspace\\Katalogi411\\
+
+
+------------------------------------------------------------------------
