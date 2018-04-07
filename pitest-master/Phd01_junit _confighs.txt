@@ -26,4 +26,22 @@ org.junit.tests.AllTests
 D:\\Workspace\\Katalogi411\\
 
 
+
+--classPath
+D:\\Workspace\\jj411b1\\target\\test\\java\\,D:\\Workspace\\jj411b1\\target\\main\\
+--reportDir
+E:\\trash\\
+--targetClasses
+org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+--targetTests
+org.junit.tests.AllTests
+--sourceDirs
+D:\\Workspace\\jj411b1\\
+
+
 ------------------------------------------------------------------------
+
+
+
+
+Komenda do czytania plikó w katalogu: dir  /b /oG > print.txt

@@ -79,16 +79,19 @@ public class ConsoleUi implements Iui{
                            while(Bayesit<1){
                                FromFileMetaData tempDataLocal_bayes =new FromFileMetaData(true);
                                for (FromFileMetaData data:tempDataLocal_bayes.GetMetaDataAsAList()) {
-                                   System.out.println(".");
-                                   System.out.println(".");
-                                   System.out.println(".");
-                                   System.out.println(".");
-                                   System.out.println("-----------------------------------------------------------");
-                                   System.out.println("MUTACJA BAYES Dla: "+ data.Classname);
-                                   System.out.println("-----------------------------------------------------------");
-                                   MutationRandomizerSingleton.SetBayes = true;
-                                   MutationRandomizerSingleton.ActualClass =data.Classname;
-                                   _workerSerwer.RunnPitStandAlone(data);
+                                   try{
+                                       System.out.println(".");
+                                       System.out.println(".");
+                                       System.out.println(".");
+                                       System.out.println(".");
+                                       System.out.println("-----------------------------------------------------------");
+                                       System.out.println("MUTACJA BAYES Dla: "+ data.Classname);
+                                       System.out.println("-----------------------------------------------------------");
+                                       MutationRandomizerSingleton.SetBayes = true;
+                                       MutationRandomizerSingleton.ActualClass =data.Classname;
+                                       _workerSerwer.RunnPitStandAlone(data);
+
+                                   }catch (Exception e){}
 
                                }
                                Bayesit++;
