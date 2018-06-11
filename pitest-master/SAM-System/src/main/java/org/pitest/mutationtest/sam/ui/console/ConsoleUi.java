@@ -73,7 +73,8 @@ public class ConsoleUi implements Iui{
                            // MutationRandomizerSingleton.SetBayes = true;
                             _workerSerwer.RunnPitStandAlone(tempDataLocal);
                             break;
-                        case "run mutation -bayes": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga z uwzglednienim bayesa
+
+                        case "run mutation -bayes -pc": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga z uwzglednienim bayesa
 
                            int Bayesit =0;
                            while(Bayesit<1){
@@ -96,6 +97,18 @@ public class ConsoleUi implements Iui{
                                }
                                Bayesit++;
                            }
+
+
+
+                            break;
+
+                        case "run mutation -bayes": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga z uwzglednienim bayesa
+                            FromFileMetaData tempDataLocal_bayes2 =new FromFileMetaData(true);
+                            MutationRandomizerSingleton.SetBayes = true;
+                            MutationRandomizerSingleton.ActualClass ="alll project";
+                            _workerSerwer.RunnPitStandAlone(tempDataLocal_bayes2);
+
+
 
 
 

@@ -1,29 +1,28 @@
 Dla wersji 412----------------------------------------------------------
 
 --classPath
-D:\\Workspace\\Katalogi412\\target\\test-classes\\,D:\\Workspace\\Katalogi412\\target\\classes\\
+D:\\Workspace\\jj412\\target\\test-classes\\,D:\\Workspace\\jj412\\target\\classes\\
 --reportDir
 E:\\trash\\
 --targetClasses
-org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+org.junit.ComparisonFailure,org.junit.before,org.junit.ignore,org.junit.assumptionViolatedException,org.junit.Assume,org.junit.Assert,org.junit.validator.AnnotationsValidator,org.junit.validator.AnnotationValidator,org.junit.validator.AnnotationValidatorFactory,org.junit.validator.print.txt,org.junit.validator.PublicClassValidator,org.junit.validator.ValidateWith,org.junit.runners.MethodSorters,org.junit.runners.BlockJUnit4ClassRunner,org.junit.runners.Parameterized,org.junit.runners.ParentRunner,org.junit.runners.Suite,org.junit.runner.FilterFactories,org.junit.runner.Describable,org.junit.runner.FilterFactoryParams,org.junit.runner.JUnitCommandLineParseResult,org.junit.runner.JUnitCore,org.junit.runner.Computer,org.junit.runner.FilterFactory,org.junit.runner.Description,org.junit.runner.package-info,org.junit.runner.Request,org.junit.runner.Result,org.junit.runner.Runner,org.junit.runner.RunWith,org.junit.rules.DisableOnDebug,org.junit.rules.ErrorCollector,org.junit.rules.ExpectedException,org.junit.rules.ExpectedExceptionMatcherBuilder,org.junit.rules.ExternalResource,org.junit.rules.MethodRule,org.junit.rules.RuleChain,org.junit.rules.RunRules,org.junit.rules.Stopwatch,org.junit.rules.TemporaryFolder,org.junit.rules.TestName,org.junit.rules.TestRule,org.junit.rules.TestWatcher,org.junit.rules.TestWatchman,org.junit.rules.Timeout,org.junit.rules.Verifier,org.junit.internal.ComparisonCriteria,org.junit.internal.ExactComparisonCriteria,org.junit.internal.Classes,org.junit.internal.JUnitSystem,org.junit.internal.AssumptionViolatedException,org.junit.internal.MethodSorter,org.junit.internal.RealSystem,org.junit.internal.ArrayComparisonFailure,org.junit.internal.InexactComparisonCriteria,org.junit.internal.TextListener,org.junit.internal.Throwables
 --targetTests
 org.junit.tests.AllTests
 --sourceDirs
-D:\\Workspace\\Katalogi412\\
-
+D:\\Workspace\\jj412\\
 
 Dla wersji 411----------------------------------------------------------
 
 --classPath
-D:\\Workspace\\Katalogi411\\target\\test\\java\\,D:\\Workspace\\Katalogi411\\target\\main\\
+D:\\Workspace\\jj411\\target\\test\\java\\,D:\\Workspace\\jj411\\target\\main\\
 --reportDir
 E:\\trash\\
 --targetClasses
-org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+org.junit.ComparisonFailure,org.junit.before,org.junit.ignore,org.junit.assumptionViolatedException,org.junit.Assume,org.junit.Assert,org.junit.validator.AnnotationsValidator,org.junit.validator.AnnotationValidator,org.junit.validator.AnnotationValidatorFactory,org.junit.validator.print.txt,org.junit.validator.PublicClassValidator,org.junit.validator.ValidateWith,org.junit.runners.MethodSorters,org.junit.runners.BlockJUnit4ClassRunner,org.junit.runners.Parameterized,org.junit.runners.ParentRunner,org.junit.runners.Suite,org.junit.runner.FilterFactories,org.junit.runner.Describable,org.junit.runner.FilterFactoryParams,org.junit.runner.JUnitCommandLineParseResult,org.junit.runner.JUnitCore,org.junit.runner.Computer,org.junit.runner.FilterFactory,org.junit.runner.Description,org.junit.runner.package-info,org.junit.runner.Request,org.junit.runner.Result,org.junit.runner.Runner,org.junit.runner.RunWith,org.junit.rules.DisableOnDebug,org.junit.rules.ErrorCollector,org.junit.rules.ExpectedException,org.junit.rules.ExpectedExceptionMatcherBuilder,org.junit.rules.ExternalResource,org.junit.rules.MethodRule,org.junit.rules.RuleChain,org.junit.rules.RunRules,org.junit.rules.Stopwatch,org.junit.rules.TemporaryFolder,org.junit.rules.TestName,org.junit.rules.TestRule,org.junit.rules.TestWatcher,org.junit.rules.TestWatchman,org.junit.rules.Timeout,org.junit.rules.Verifier,org.junit.internal.ComparisonCriteria,org.junit.internal.ExactComparisonCriteria,org.junit.internal.Classes,org.junit.internal.JUnitSystem,org.junit.internal.AssumptionViolatedException,org.junit.internal.MethodSorter,org.junit.internal.RealSystem,org.junit.internal.ArrayComparisonFailure,org.junit.internal.InexactComparisonCriteria,org.junit.internal.TextListener,org.junit.internal.Throwables
 --targetTests
 org.junit.tests.AllTests
 --sourceDirs
-D:\\Workspace\\Katalogi411\\
+D:\\Workspace\\jj411\\
 
 
 
@@ -32,12 +31,11 @@ D:\\Workspace\\jj411b1\\target\\test\\java\\,D:\\Workspace\\jj411b1\\target\\mai
 --reportDir
 E:\\trash\\
 --targetClasses
-org.junit.Assert,org.junit.Assume,org.junit.ComparisonFailure
+org.hamcrest.internal.ArrayIterator,org.junit.Assert,org.junit.Assume,org.hamcrest.BaseDescription,org.hamcrest.StringDescription,org.hamcrest.BaseMatcher,org.hamcrest.core.AnyOf,org.hamcrest.CustomMatcher,org.hamcrest.core.DescribedAs,org.hamcrest.DiagnosingMatcher,org.hamcrest.core.AllOf,org.hamcrest.core.IsInstanceOf,org.hamcrest.core.Is,org.hamcrest.core.IsAnything,org.hamcrest.core.IsEqual,org.hamcrest.core.IsNot,org.hamcrest.core.IsNull,org.hamcrest.core.IsSame,org.hamcrest.TypeSafeDiagnosingMatcher,org.hamcrest.core.CombinableMatcher,org.hamcrest.core.Every,org.hamcrest.FeatureMatcher<T,U>,org.hamcrest.core.IsCollectionContaining,org.hamcrest.TypeSafeMatcher,org.hamcrest.CustomTypeSafeMatcher,org.hamcrest.core.SubstringMatcher,org.hamcrest.core.StringContains,org.hamcrest.core.StringEndsWith,org.hamcrest.core.StringStartsWith,org.hamcrest.core.CombinableMatcher.CombinableBothMatcher<X>,org.hamcrest.core.CombinableMatcher.CombinableEitherMatcher<X>,org.junit.runner.Computer,org.junit.experimental.ParallelComputer,org.hamcrest.Condition,org.hamcrest.CoreMatchers,org.junit.runner.Description,org.hamcrest.Description.NullDescription,org.junit.rules.ExpectedException,org.junit.rules.ExternalResource,org.junit.rules.TemporaryFolder,org.junit.runner.notification.Failure,org.junit.runner.manipulation.Filter,org.junit.experimental.categories.Categories.CategoryFilter,org.junit.runners.model.FrameworkMember,org.junit.runners.model.FrameworkField,org.junit.runners.model.FrameworkMethod,org.junit.runner.JUnitCore,org.junit.matchers.JUnitMatchers,org.hamcrest.MatcherAssert,org.junit.experimental.max.MaxCore,org.junit.experimental.max.MaxHistory,org.junit.experimental.theories.ParameterSignature,org.junit.experimental.theories.ParameterSupplier,org.junit.experimental.theories.suppliers.TestedOnSupplier,org.junit.experimental.theories.PotentialAssignment,org.junit.experimental.results.PrintableResult,org.hamcrest.internal.ReflectiveTypeFinder,org.junit.runner.Request,org.junit.runner.Result,org.junit.experimental.results.ResultMatchers,org.junit.rules.RuleChain,org.junit.runner.notification.RunListener,org.junit.runner.Runner,org.junit.internal.runners.JUnit38ClassRunner,org.junit.internal.runners.SuiteMethod,org.junit.runners.AllTests,org.junit.runners.ParentRunner,org.junit.runners.BlockJUnit4ClassRunner,org.junit.runners.JUnit4,org.junit.experimental.theories.Theories,org.junit.runners.Suite,org.junit.experimental.categories.Categories,org.junit.experimental.runners.Enclosed,org.junit.runners.Parameterized,org.junit.runners.model.RunnerBuilder,org.junit.runner.notification.RunNotifier,org.hamcrest.internal.SelfDescribingValue,org.hamcrest.internal.SelfDescribingValueIterator,org.junit.runner.manipulation.Sorter,org.junit.runners.model.Statement,org.junit.rules.RunRules,org.junit.experimental.theories.Theories.TheoryAnchor,org.junit.runners.model.TestClass,org.junit.rules.TestWatcher,org.junit.rules.TestName,org.junit.rules.TestWatchman,java.lang.Throwable,java.lang.Error,java.lang.AssertionError,org.junit.ComparisonFailure,java.lang.Exception,org.junit.experimental.max.CouldNotReadCoreException,org.junit.runners.model.InitializationError,org.junit.runners.model.MultipleFailureException,org.junit.runner.manipulation.NoTestsRemainException,org.junit.experimental.theories.PotentialAssignment.CouldNotGenerateValueException,java.lang.RuntimeException,org.junit.runner.notification.StoppedByUserException,org.junit.Test.None,org.junit.rules.Timeout,org.junit.rules.Verifier,org.junit.rules.ErrorCollector
 --targetTests
 org.junit.tests.AllTests
 --sourceDirs
 D:\\Workspace\\jj411b1\\
-
 
 ------------------------------------------------------------------------
 
