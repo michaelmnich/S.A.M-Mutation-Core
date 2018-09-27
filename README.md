@@ -12,3 +12,4 @@ S.A.M-Mutation-Core/pitest-master/mainconfig.cfg -> Plik konfiguracyjny środowi
 S.A.M-Mutation-Core/pitest-master/MutationProbabilityConfig.ini -> Plik konfiguracyjny optymalizacji
 opartej o bayesowskei wnioskowanie statystyczne
 
+najnowszy release: https://github.com/michaelmnich/S.A.M-Mutation-Core/releases/tag/1.0
