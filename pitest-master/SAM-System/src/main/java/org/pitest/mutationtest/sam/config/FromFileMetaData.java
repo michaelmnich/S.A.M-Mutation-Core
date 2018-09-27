@@ -55,6 +55,41 @@ public class FromFileMetaData implements IProjectMetaData {
                         i++;
                     }
 
+                    // lista kalsss z pliczku -------------------------------
+                String classes ="";
+                String classes2 ="";
+                List<FromFileMetaData> confList = new ArrayList<>();
+                int j=0;
+                int k=0;
+                for (String arg : arguments ) {
+                    j++;
+
+                    if(arg.equals("--targetClasses")){
+                        classes=  arguments.get(j);
+                        break;
+                    }
+                }
+                for (String arg : arguments ) {
+
+                    k++;
+
+                    if(arg.equals("--reportDir")){
+                        classes2=  arguments.get(k);
+                        break;
+                    }
+                }
+
+                for (String cls:classes.split(",")) {
+                    List<String> arg= new ArrayList<String>(arguments) ;
+                    List<String> clspath=new ArrayList<String>(_getClaspathAsAList);
+                    arg.set(j, cls);
+                    arg.set(k, arg.get(k)+"\\\\"+cls);
+                    confList.add(new FromFileMetaData(arg, clspath, cls));
+                }
+                _confList =confList;
+                    // lista kalsss z pliczku -------------------------------
+
+
             }else{
                 System.out.println("ERROR: There is no ini file: "+ f.toString());
             }

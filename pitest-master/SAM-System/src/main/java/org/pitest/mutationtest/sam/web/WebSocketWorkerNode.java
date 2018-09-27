@@ -218,7 +218,7 @@ public class WebSocketWorkerNode implements  ISerwer, SocketListener  {
             _listeners.remove( l );
         }
         private synchronized void _fireEvent() { // strzelamy eventem
-            SocketEvent mood = new SocketEvent( this, "dupa testowa" );
+            SocketEvent mood = new SocketEvent( this, "dupa testowa" );//to sluzy do mazykania struktury drzewiastej wszytkich dzieci
             Iterator listeners = _listeners.iterator();
             while( listeners.hasNext() ) {
                 ((SocketListener)listeners.next()).InfoReceived(mood);

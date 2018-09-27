@@ -14,6 +14,8 @@
  */
 package org.pitest.mutationtest.statistics;
 
+import org.pitest.extensions.MutationRandomizerSingleton;
+
 import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -68,6 +70,9 @@ public final class MutationStatistics {
         + this.getPercentageDetected() + "%)");
     out.println(">> Ran " + this.numberOfTestsRun + " tests ("
         + getTestsPerMutation() + " tests per mutation)");
+
+    MutationRandomizerSingleton.TestRan = this.numberOfTestsRun+"";
+    MutationRandomizerSingleton.GlobalTestsPermut= getTestsPerMutation();
 
   }
 

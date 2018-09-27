@@ -284,3 +284,190 @@ Operator: RETURN_VALS stare= 0.5275437459494491 nowe= 0.5068986202759448 Skala= 
 Operator: MATH stare= 0.7785714285714286 nowe= 0.7602739726027398 Skala= 100
 Operator: NEGATE_CONDITIONALS stare= 0.4448857994041708 nowe= 0.4214417744916821 Skala= 100
 ================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.45161290322580644 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.5 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.3004694835680751 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4827586206896552 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.20359281437125748 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.45161290322580644 nowe= 0.4117647058823529 Skala= 100
+Operator: INCREMENTS stare= 0.5 nowe= 0.48484848484848486 Skala= 100
+Operator: RETURN_VALS stare= 0.3004694835680751 nowe= 0.3 Skala= 100
+Operator: MATH stare= 0.4827586206896552 nowe= 0.47058823529411764 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.20359281437125748 nowe= 0.21693121693121692 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.4117647058823529 nowe= 0.3684210526315789 Skala= 100
+Operator: INCREMENTS stare= 0.48484848484848486 nowe= 0.48717948717948717 Skala= 100
+Operator: RETURN_VALS stare= 0.3 nowe= 0.2781065088757396 Skala= 100
+Operator: MATH stare= 0.47058823529411764 nowe= 0.4722222222222222 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.21693121693121692 nowe= 0.19369369369369369 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.3684210526315789 nowe= 0.35714285714285715 Skala= 100
+Operator: INCREMENTS stare= 0.48717948717948717 nowe= 0.46511627906976744 Skala= 100
+Operator: RETURN_VALS stare= 0.2781065088757396 nowe= 0.2751842751842752 Skala= 100
+Operator: MATH stare= 0.4722222222222222 nowe= 0.43902439024390244 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.19369369369369369 nowe= 0.1803921568627451 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.35714285714285715 nowe= 0.34782608695652173 Skala= 100
+Operator: INCREMENTS stare= 0.46511627906976744 nowe= 0.40816326530612246 Skala= 100
+Operator: RETURN_VALS stare= 0.2751842751842752 nowe= 0.26963906581740976 Skala= 100
+Operator: MATH stare= 0.43902439024390244 nowe= 0.4418604651162791 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.1803921568627451 nowe= 0.17985611510791366 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.34782608695652173 nowe= 0.3541666666666667 Skala= 100
+Operator: INCREMENTS stare= 0.40816326530612246 nowe= 0.37735849056603776 Skala= 100
+Operator: RETURN_VALS stare= 0.26963906581740976 nowe= 0.2681564245810056 Skala= 100
+Operator: MATH stare= 0.4418604651162791 nowe= 0.42857142857142855 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.17985611510791366 nowe= 0.17096774193548386 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: INCREMENTS stare= 0.37735849056603776 nowe= 0.39285714285714285 Skala= 100
+Operator: CONDITIONALS_BOUNDARY stare= 0.3541666666666667 nowe= 0.35294117647058826 Skala= 100
+Operator: RETURN_VALS stare= 0.2681564245810056 nowe= 0.26262626262626265 Skala= 100
+Operator: MATH stare= 0.42857142857142855 nowe= 0.42592592592592593 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.17096774193548386 nowe= 0.1661721068249258 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.35294117647058826 nowe= 0.35185185185185186 Skala= 100
+Operator: INCREMENTS stare= 0.39285714285714285 nowe= 0.3709677419354839 Skala= 100
+Operator: RETURN_VALS stare= 0.26262626262626265 nowe= 0.25384615384615383 Skala= 100
+Operator: MATH stare= 0.42592592592592593 nowe= 0.42105263157894735 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.1661721068249258 nowe= 0.16164383561643836 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.35185185185185186 nowe= 0.3389830508474576 Skala= 100
+Operator: INCREMENTS stare= 0.3709677419354839 nowe= 0.373134328358209 Skala= 100
+Operator: RETURN_VALS stare= 0.25384615384615383 nowe= 0.2569444444444444 Skala= 100
+Operator: MATH stare= 0.42105263157894735 nowe= 0.4166666666666667 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.16164383561643836 nowe= 0.1556122448979592 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: INCREMENTS stare= 0.373134328358209 nowe= 0.3333333333333333 Skala= 100
+Operator: CONDITIONALS_BOUNDARY stare= 0.3389830508474576 nowe= 0.3333333333333333 Skala= 100
+Operator: RETURN_VALS stare= 0.2569444444444444 nowe= 0.2837370242214533 Skala= 100
+Operator: MATH stare= 0.4166666666666667 nowe= 0.41935483870967744 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.1556122448979592 nowe= 0.1662921348314607 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 0.3333333333333333 nowe= 0.3333333333333333 Skala= 100
+Operator: INCREMENTS stare= 0.3333333333333333 nowe= 0.32894736842105265 Skala= 100
+Operator: RETURN_VALS stare= 0.2837370242214533 nowe= 0.2796976241900648 Skala= 100
+Operator: MATH stare= 0.41935483870967744 nowe= 0.4117647058823529 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 0.1662921348314607 nowe= 0.15723270440251572 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.3584905660377358 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.3829787234042553 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.35428571428571426 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4666666666666667 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.24216524216524216 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.42424242424242425 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.4117647058823529 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.24701195219123506 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4375 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.16230366492146597 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.42424242424242425 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.4117647058823529 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.24701195219123506 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4375 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.16230366492146597 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.42424242424242425 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.4117647058823529 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.26693227091633465 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4375 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.16230366492146597 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.42424242424242425 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.4117647058823529 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.250996015936255 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4375 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.16230366492146597 Skala= 100
+================================================================================
+
+ 
+================================================================================
+Prawdopodobieństwa Popraione Bayesem Nowe wartosci: 
+================================================================================
+Operator: CONDITIONALS_BOUNDARY stare= 1.0 nowe= 0.42424242424242425 Skala= 100
+Operator: INCREMENTS stare= 1.0 nowe= 0.4117647058823529 Skala= 100
+Operator: RETURN_VALS stare= 1.0 nowe= 0.24701195219123506 Skala= 100
+Operator: MATH stare= 1.0 nowe= 0.4375 Skala= 100
+Operator: NEGATE_CONDITIONALS stare= 1.0 nowe= 0.16230366492146597 Skala= 100
+================================================================================

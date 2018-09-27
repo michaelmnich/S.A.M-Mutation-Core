@@ -34,6 +34,11 @@ public class MutationRandomizerSingleton {
     double _betha=Double.NaN;
     public static boolean SetBayes = false;
     public static String ActualClass;
+
+    public static MutationStatistics GlobalStats;
+    public static int GlobalTestCount;
+    public static String GlobalTestsPermut;
+    public static String TestRan;
     //Bayses------
 
     //-------------------------------------------------------------------------------------------------------------
@@ -199,6 +204,8 @@ public class MutationRandomizerSingleton {
     }
 
     public static void PushStats(MutationStatisticsListener stats) {
+         GlobalStats = stats.getStatistics();
+
         if(!SetBayes) return;
         //1. Objasnienie matematyczne Dla Kazdego i wyznaczamy alpha oraz beta  (stałe bayesa)  i to jest indeks operataro mutacyjnego
         //Poczatkowo ustawiamy stale o wartosni np 12 kazda wartośc poczatkow ajest dobra gdy nic nie wiemy. PATRZ konstruktor

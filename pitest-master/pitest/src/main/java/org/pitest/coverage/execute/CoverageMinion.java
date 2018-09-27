@@ -30,6 +30,7 @@ import org.pitest.classinfo.ClassName;
 import org.pitest.classpath.ClassPathByteArraySource;
 import org.pitest.coverage.CoverageTransformer;
 import org.pitest.dependency.DependencyExtractor;
+import org.pitest.extensions.MutationRandomizerSingleton;
 import org.pitest.functional.FCollection;
 import org.pitest.functional.predicate.Predicate;
 import org.pitest.help.PitHelpError;
@@ -78,8 +79,8 @@ public class CoverageMinion {
 
       final List<TestUnit> tus = getTestsFromParent(dis, paramsFromParent);
 
-      LOG.info(tus.size() + " tests received");
-
+      LOG.info(tus.size() + " tests receivddddddddddddddddded");
+      MutationRandomizerSingleton.GlobalTestCount = tus.size();
       final CoverageWorker worker = new CoverageWorker(invokeQueue, tus);
 
       worker.run();
