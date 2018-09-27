@@ -1,5 +1,7 @@
 # S.A.M-Mutation-Core
 
+INFO: Projekt wspierany przez środowisko probgramistyczne InteliJ oraz builder Maven.
+
 Katalog główny: pitest-master -> Zawiera Zmodyfikowany system PiTest oraz S.A.M-Mutation-Core,
 czyli moduły systemu S.A.M zarządzjące procesem mutacji oraz optymalizacją tego procesu. 
 
