@@ -1,0 +1,2439 @@
+<html>
+<head>
+<style type='text/css'>
+html, body, div, span, p, blockquote, pre {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	line-height: 1;
+	color: black;
+	background: white;
+	margin-left: 20px;
+}
+
+.src { 
+	border: 1px solid #dddddd;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-family: Consolas, Courier, monospace;
+}
+
+
+.covered {background-color: #ddffdd}
+.uncovered {background-color: #ffdddd}
+.killed {background-color: #aaffaa}
+.survived {background-color: #ffaaaa}
+.uncertain {background-color: #dde7ef}
+.run_error {background-color: #dde7ef}
+.na {background-color: #eeeeee}
+.timed_out {background-color: #dde7ef}
+.non_viable {background-color: #aaffaa}
+.memory_error {background-color: #dde7ef}
+.not_started {background-color: #dde7ef; color : red}
+.no_coverage {background-color: #ffaaaa}
+
+
+.pop {outline:none; }
+.pop strong {line-height:30px;}
+.pop {text-decoration:none;}
+.pop span { z-index:10;display:none; padding:14px 20px; margin-top:-30px; margin-left:28px; width:800px; line-height:16px; word-wrap:break-word; }
+.pop:hover span{ display:inline; position:absolute; color:#111; border:1px solid #DCA; background:#fffAF0;}
+
+.pop span { border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -moz-box-shadow: 5px 5px 8px #CCC; -webkit-box-shadow: 5px 5px 8px #CCC; box-shadow: 5px 5px 8px #CCC; }
+</style>
+
+</head>
+<body>
+
+
+<h1>IMatrixMathImpl.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_1'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package matrixlibrary;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_2'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_3'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class IMatrixMathImpl implements IMatrixMath {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_4'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix inverseMatrix(IMatrix m1) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_5'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        //  http://mathworld.wolfram.com/MatrixInverse.html</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_6'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double det = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_7'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        try {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_8'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            det = m1.determinant();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_9'/>
+9
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_9'>2</a>
+<span>
+
+1. inverseMatrix : changed conditional boundary &rarr; SURVIVED<br/>
+
+2. inverseMatrix : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            if (Math.abs(det) &#60; 1e-12)</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_10'/>
+10
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_10'>1</a>
+<span>
+
+1. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                return null;</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_11'></a>
+<span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        } catch (InvalidDimensionException e) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_12'/>
+12
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_12'>1</a>
+<span>
+
+1. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            return null;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_13'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_14'/>
+14
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_14'>2</a>
+<span>
+
+1. inverseMatrix : changed conditional boundary &rarr; KILLED<br/>
+
+2. inverseMatrix : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (m1.getHeight() &#62; 3)</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_15'/>
+15
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_15'>1</a>
+<span>
+
+1. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            return null;    //Zaimplementowano do macierzy 2x2, 3x3</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_16'>1</a>
+<span>
+
+1. inverseMatrix : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (m1.getHeight() == 1)</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_17'/>
+17
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_17'>1</a>
+<span>
+
+1. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE<br/>
+
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            return m1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_18'>1</a>
+<span>
+
+1. inverseMatrix : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (m1.getHeight() == 2) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_19'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            double[][] result = new double[2][2];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_20'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            result[0][0] = m1.getMatrixValue(1, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_21'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            result[1][1] = m1.getMatrixValue(0, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_22'/>
+22
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_22'>1</a>
+<span>
+
+1. inverseMatrix : removed negation &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[0][1] = -m1.getMatrixValue(0, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_23'/>
+23
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_23'>1</a>
+<span>
+
+1. inverseMatrix : removed negation &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[1][0] = -m1.getMatrixValue(1, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_24'/>
+24
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_24'>2</a>
+<span>
+
+1. inverseMatrix : Replaced double division with multiplication &rarr; SURVIVED<br/>
+
+2. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            return scalarMultiplication(new IMatrixImpl(result), 1 / det);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_25'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_26'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            double[][] result = new double[3][3];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_27'/>
+27
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_27'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[0][0] = m1.getMatrixValue(1, 1) * m1.getMatrixValue(2, 2) - m1.getMatrixValue(1, 2) * m1.getMatrixValue(2, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_28'/>
+28
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_28'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double multiplication with division &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[1][0] = m1.getMatrixValue(0, 2) * m1.getMatrixValue(2, 1) - m1.getMatrixValue(0, 1) * m1.getMatrixValue(2, 2);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_29'/>
+29
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_29'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            result[2][0] = m1.getMatrixValue(0, 1) * m1.getMatrixValue(1, 2) - m1.getMatrixValue(0, 2) * m1.getMatrixValue(1, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_30'/>
+30
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_30'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double multiplication with division &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[0][1] = m1.getMatrixValue(1, 2) * m1.getMatrixValue(2, 0) - m1.getMatrixValue(1, 0) * m1.getMatrixValue(2, 2);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_31'/>
+31
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_31'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            result[1][1] = m1.getMatrixValue(0, 0) * m1.getMatrixValue(2, 2) - m1.getMatrixValue(0, 2) * m1.getMatrixValue(2, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_32'/>
+32
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_32'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[2][1] = m1.getMatrixValue(0, 2) * m1.getMatrixValue(1, 0) - m1.getMatrixValue(0, 0) * m1.getMatrixValue(1, 2);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_33'/>
+33
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_33'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            result[0][2] = m1.getMatrixValue(1, 0) * m1.getMatrixValue(2, 1) - m1.getMatrixValue(1, 1) * m1.getMatrixValue(2, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_34'/>
+34
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_34'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[1][2] = m1.getMatrixValue(0, 1) * m1.getMatrixValue(2, 0) - m1.getMatrixValue(0, 0) * m1.getMatrixValue(2, 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_35'/>
+35
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_35'>3</a>
+<span>
+
+1. inverseMatrix : Replaced double subtraction with addition &rarr; SURVIVED<br/>
+
+2. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+3. inverseMatrix : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            result[2][2] = m1.getMatrixValue(0, 0) * m1.getMatrixValue(1, 1) - m1.getMatrixValue(0, 1) * m1.getMatrixValue(1, 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_36'>2</a>
+<span>
+
+1. inverseMatrix : Replaced double division with multiplication &rarr; KILLED<br/>
+
+2. inverseMatrix : mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return scalarMultiplication(new IMatrixImpl(result), 1 / det);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_37'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_38'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_39'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_40'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix matrixAddition(IMatrix m1, IMatrix m2) throws InvalidDimensionException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_41'/>
+41
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_41'>2</a>
+<span>
+
+1. matrixAddition : negated conditional &rarr; KILLED<br/>
+
+2. matrixAddition : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (m1.getHeight() != m2.getHeight() || m1.getWidth() != m2.getWidth())</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_42'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new InvalidDimensionException();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_43'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double[][] m3 = new double[m1.getWidth()][m1.getHeight()];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_44'>3</a>
+<span>
+
+1. matrixAddition : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixAddition : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixAddition : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for (int i = 0; i &#60; m1.getWidth(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_45'>3</a>
+<span>
+
+1. matrixAddition : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixAddition : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixAddition : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for (int j = 0; j &#60; m1.getHeight(); j++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_46'>1</a>
+<span>
+
+1. matrixAddition : Replaced double addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                m3[i][j] = m1.getMatrixValue(i, j) + m2.getMatrixValue(i, j);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_47'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_48'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_49'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        IMatrix result = new IMatrixImpl();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_50'/>
+50
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_50'>1</a>
+<span>
+
+1. matrixAddition : removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        result.setMatrixValues(m3);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_51'>1</a>
+<span>
+
+1. matrixAddition : mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixAddition to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return result;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_52'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_53'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_54'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix matrixMultiplication(IMatrix m1, IMatrix m2) throws InvalidDimensionException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_55'/>
+55
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_55'>2</a>
+<span>
+
+1. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+2. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if(m1==null || m2==null)throw new InvalidDimensionException();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_56'/>
+56
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_56'>1</a>
+<span>
+
+1. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if(m1.getWidth()!=m2.getHeight())throw new InvalidDimensionException();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_57'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        IMatrix temp = new IMatrixImpl();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_58'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double [][] p = new double[m1.getHeight()][m2.getWidth()];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_59'/>
+59
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_59'>1</a>
+<span>
+
+1. matrixMultiplication : removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        temp.setMatrixValues(p);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_60'/>
+60
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_60'>3</a>
+<span>
+
+1. matrixMultiplication : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixMultiplication : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for(int i=0;i&#60;m1.getHeight();i++)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_61'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_62'/>
+62
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_62'>3</a>
+<span>
+
+1. matrixMultiplication : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixMultiplication : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for(int j=0;j&#60;m2.getWidth();j++){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_63'/>
+63
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_63'>1</a>
+<span>
+
+1. matrixMultiplication : removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; SURVIVED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>                temp.setMatrixValue(j,i,0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_64'/>
+64
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_64'>3</a>
+<span>
+
+1. matrixMultiplication : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixMultiplication : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                for(int k=0;k&#60;m1.getWidth();k++)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_65'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_66'>3</a>
+<span>
+
+1. matrixMultiplication : Replaced double multiplication with division &rarr; KILLED<br/>
+
+2. matrixMultiplication : Replaced double addition with subtraction &rarr; KILLED<br/>
+
+3. matrixMultiplication : removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                 temp.setMatrixValue(j,i,temp.getMatrixValue(j,i)+m1.getMatrixValue(k,i)*m2.getMatrixValue(j,k));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_67'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_68'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_69'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_70'/>
+70
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_70'>1</a>
+<span>
+
+1. matrixMultiplication : mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixMultiplication to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return temp;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_71'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_72'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_73'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix matrixSubtracting(IMatrix m1, IMatrix m2) throws InvalidDimensionException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_74'/>
+74
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_74'>2</a>
+<span>
+
+1. matrixSubtracting : negated conditional &rarr; KILLED<br/>
+
+2. matrixSubtracting : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (m1.getHeight() != m2.getHeight() || m1.getWidth() != m2.getWidth())</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_75'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new InvalidDimensionException();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_76'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double[][] m3 = new double[m1.getWidth()][m1.getHeight()];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_77'/>
+77
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_77'>3</a>
+<span>
+
+1. matrixSubtracting : negated conditional &rarr; SURVIVED<br/>
+
+2. matrixSubtracting : changed conditional boundary &rarr; KILLED<br/>
+
+3. matrixSubtracting : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        for (int i = 0; i &#60; m1.getWidth(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_78'/>
+78
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_78'>3</a>
+<span>
+
+1. matrixSubtracting : negated conditional &rarr; SURVIVED<br/>
+
+2. matrixSubtracting : changed conditional boundary &rarr; KILLED<br/>
+
+3. matrixSubtracting : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            for (int j = 0; j &#60; m1.getHeight(); j++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_79'/>
+79
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_79'>1</a>
+<span>
+
+1. matrixSubtracting : Replaced double subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                m3[i][j] = m1.getMatrixValue(i, j) - m2.getMatrixValue(i, j);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_80'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_81'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_82'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        IMatrix result = new IMatrixImpl();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_83'/>
+83
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_83'>1</a>
+<span>
+
+1. matrixSubtracting : removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        result.setMatrixValues(m3);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_84'/>
+84
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_84'>1</a>
+<span>
+
+1. matrixSubtracting : mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixSubtracting to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return result;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_85'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_86'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_87'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix matrixTransposition(IMatrix m1) throws InvalidDimensionException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_88'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        IMatrix tmp=  new IMatrixImpl();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_89'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double [][] p = new double[m1.getHeight()][m1.getWidth()];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_90'>1</a>
+<span>
+
+1. matrixTransposition : removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        tmp.setMatrixValues(p);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_91'/>
+91
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_91'>3</a>
+<span>
+
+1. matrixTransposition : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixTransposition : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixTransposition : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for(int i=0;i&#60;m1.getHeight();i++)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_92'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_93'/>
+93
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_93'>3</a>
+<span>
+
+1. matrixTransposition : changed conditional boundary &rarr; KILLED<br/>
+
+2. matrixTransposition : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. matrixTransposition : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for(int j=0;j&#60;m1.getWidth();j++){</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_94'/>
+94
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_94'>1</a>
+<span>
+
+1. matrixTransposition : removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                tmp.setMatrixValue(i,j,m1.getMatrixValue(j,i));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_95'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_96'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_97'/>
+97
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_97'>1</a>
+<span>
+
+1. matrixTransposition : mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixTransposition to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return tmp;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_98'/>
+98
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_98'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_99'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_100'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public IMatrix scalarMultiplication(IMatrix m1, double scalar) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_101'></a>
+<span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        double[][] m3 = new double[m1.getWidth()][m1.getHeight()];</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_102'/>
+102
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_102'>3</a>
+<span>
+
+1. scalarMultiplication : changed conditional boundary &rarr; KILLED<br/>
+
+2. scalarMultiplication : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. scalarMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        for (int i = 0; i &#60; m1.getWidth(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_103'/>
+103
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_103'>3</a>
+<span>
+
+1. scalarMultiplication : changed conditional boundary &rarr; KILLED<br/>
+
+2. scalarMultiplication : Changed increment from 1 to -1 &rarr; KILLED<br/>
+
+3. scalarMultiplication : negated conditional &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for (int j = 0; j &#60; m1.getHeight(); j++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_104'/>
+104
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_104'>1</a>
+<span>
+
+1. scalarMultiplication : Replaced double multiplication with division &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                m3[i][j] = m1.getMatrixValue(i, j) * scalar;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_105'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_106'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_107'/>
+107
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_107'>1</a>
+<span>
+
+1. scalarMultiplication : mutated return of Object value for matrixlibrary/IMatrixMathImpl::scalarMultiplication to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new IMatrixImpl(m3);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_108'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@448b808a_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_109'></a>
+<span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_9'>9</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_9'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_10'>10</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_10'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_12'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_14'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_15'>15</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_15'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_17'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_22'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> removed negation &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_23'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> removed negation &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_24'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double division with multiplication &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_27'>27</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_27'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_28'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double multiplication with division &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_29'>29</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_29'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_30'>30</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_30'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double multiplication with division &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_31'>31</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_31'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_33'>33</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_33'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_34'>34</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_34'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_35'>35</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_35'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>none</span></span> Replaced double subtraction with addition &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>inverseMatrix<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::inverseMatrix to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_41'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixAddition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixAddition to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_55'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_56'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_59'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_60'>60</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_60'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_62'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_63'>63</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_63'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>none</span></span> removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_64'>64</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_64'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_70'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixMultiplication to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_74'>74</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_74'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_77'>77</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_77'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_78'>78</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_78'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_79'>79</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_79'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_83'>83</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_83'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixSubtracting<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixSubtracting to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValues &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_91'>91</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_91'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_93'>93</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_93'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_94'>94</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_94'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> removed call to matrixlibrary/IMatrix::setMatrixValue &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_97'>97</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_97'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>matrixTransposition<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::matrixTransposition to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_102'>102</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_102'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_103'>103</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_103'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_104'>104</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_104'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> Replaced double multiplication with division &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@448b808a_107'>107</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@448b808a_107'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>scalarMultiplication<br/><b>Killed by : </b>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest)</span></span> mutated return of Object value for matrixlibrary/IMatrixMathImpl::scalarMultiplication to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>matrixlibrary.IdealMatrixMathTest.matrixAddition(matrixlibrary.IdealMatrixMathTest) (1 ms)</li><li>matrixlibrary.IdealMatrixMathTest.matrixMultiplicationTest(matrixlibrary.IdealMatrixMathTest) (1 ms)</li><li>matrixlibrary.IdealMatrixMathTest.scalarMultiplicationTest(matrixlibrary.IdealMatrixMathTest) (1 ms)</li><li>matrixlibrary.IdealMatrixMathTest.matrixTranspositionTest(matrixlibrary.IdealMatrixMathTest) (1 ms)</li><li>matrixlibrary.IdealMatrixMathTest.matrixSubtractingtest(matrixlibrary.IdealMatrixMathTest) (1 ms)</li><li>matrixlibrary.IdealMatrixMathTest.InverseMatrixTest(matrixlibrary.IdealMatrixMathTest) (18 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.1.10
+
+</body>
+</html>

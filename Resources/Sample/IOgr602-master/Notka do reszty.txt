@@ -1,0 +1,3 @@
+Nadal mam problemy z doprowadzeniem tego specjalnego Mavena do działania,
+bardzo bym prosił żeby ktoś odpalił te testy mutacyjne i spushował folder target.
+-Jakub Pamuła
