@@ -3,6 +3,9 @@ package org.pitest.mutationtest.sam.config;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 /**
@@ -13,6 +16,7 @@ public class FromFileMetaData implements IProjectMetaData {
     private List<String> _getClaspathAsAList;
     private List<FromFileMetaData> _confList;
     public String Classname="";
+    public String FileName ="";
     public FromFileMetaData() {
         this(System.getProperty("user.dir"), "metadata.ini");
     }
@@ -32,7 +36,9 @@ public class FromFileMetaData implements IProjectMetaData {
 
     public FromFileMetaData(String dir, String configFile)  {
         try {
+
             File f =new File(dir,configFile);
+            FileName = f.getName();
             if(f.isFile()){
                 BufferedReader br = new BufferedReader(new FileReader(f));
 
@@ -187,5 +193,23 @@ public class FromFileMetaData implements IProjectMetaData {
         return _confList;
     }
 
+    public static List<FromFileMetaData> GetAllFromFileMetaDataFromDir(String MetadatasDir)
+    {
+        List<FromFileMetaData> ToReturn  = new ArrayList<FromFileMetaData>();
+        for (String filename: listFilesUsingJavaIO(MetadatasDir))
+        {
+            ToReturn.add(new FromFileMetaData(MetadatasDir, filename));
+        }
+
+
+        return ToReturn;
+    }
+
+    private static Set<String> listFilesUsingJavaIO(String dir) {
+        return Stream.of(new File(dir).listFiles())
+                .filter(file -> !file.isDirectory())
+                .map(File::getName)
+                .collect(Collectors.toSet());
+    }
 
 }

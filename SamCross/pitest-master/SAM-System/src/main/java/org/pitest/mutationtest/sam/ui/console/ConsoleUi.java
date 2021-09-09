@@ -18,6 +18,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by gosc on 19.11.2016.
@@ -82,15 +83,38 @@ public class ConsoleUi implements Iui{
                             _workerSerwer.RunnPitStandAlone(tempDataLocal);
                             break;
 
+                        case "tqed": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
+                            String strtqed = "Id;CLASS;TIME;INFO;TEST_RAN;TEST_RAN_PER_MUT;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
 
-                        case "run mutation -pc": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga z uwzglednienim bayesa
+                            List<FromFileMetaData> tqedtempDatasLocal = FromFileMetaData.GetAllFromFileMetaDataFromDir(Paths.get(System.getProperty("user.dir"),"tqed").toString());
+                            //IProjectMetaData tqedtempDataLocal =new FromFileMetaData();
+                            //
+                            //Petla start p wsyztkich plikach
+                            for (FromFileMetaData tqedtempDataLocal: tqedtempDatasLocal)
+                            {
+                                MutationRandomizerSingleton.SetBayes = false;
+                                Instant start = Instant.now();
+                                _workerSerwer.RunnPitStandAlone(tqedtempDataLocal);
+                                Instant end = Instant.now();
+                                strtqed += FileRaportGeneratorHelper.AppendRaport((FromFileMetaData) tqedtempDataLocal,start, end);
+                            }
+                            //petla stop
+                            Path path_TQED = Paths.get(System.getProperty("user.dir"), "Sonar");
+                            File f_TQED = new File( path_TQED.toString(), "raport.txt");
+                            BufferedWriter writer_TQED = new BufferedWriter(new FileWriter(f_TQED));
+                            writer_TQED.write(strtqed);
+                            writer_TQED.close();
+
+                            break;
+
+
+                        case "run mutation -pc": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga bez uwzglednienim bayesa
 
                             Calendar rightNow = Calendar.getInstance();
                             int hour = rightNow.get(Calendar.HOUR_OF_DAY);
                             int min = rightNow.get(Calendar.MINUTE);
                             int sec = rightNow.get(Calendar.SECOND);
                             Instant start = Instant.now();
-//your code
                             Instant end = Instant.now();
                             String str = "CLASS;TIME;INFO;TEST_RAN;TEST_RAN_PER_MUT;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
 

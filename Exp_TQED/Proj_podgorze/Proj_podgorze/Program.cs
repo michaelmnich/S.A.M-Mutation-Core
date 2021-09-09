@@ -22,14 +22,64 @@ namespace Proj_podgorze
 
                 if (cmd=="dirclr")
                 {
-                    var dirsToRemove = projectWorker.GetAllFiles("D:\\repos\\GitHub\\S.A.M-Mutation-Core\\Exp_TQED\\DaneWsad", "*_onlinetext_");
+                    var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneWsad", "*_onlinetext_");
                     foreach (string dir in dirsToRemove)
                     {
                         projectWorker.ClearNonImportantFiles(dir);
                     }
                     cmd = "";
                 }
-              
+
+                
+                if (cmd == "sub")
+                {
+                    int i = 1;
+                    var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneWsad","*");
+                    foreach (string dir in dirsToRemove)
+                    {
+
+                        Console.WriteLine(dir);
+                        var filestream = File.Create(Path.Combine(dir, "author.txt"));
+                        using (StreamWriter fw = new StreamWriter(filestream))
+                        {
+                            fw.Write(dir.Split('\\').Last());
+                        }
+                        filestream.Close();
+                        string newdir = dir.Replace(dir.Split('\\').Last(), i.ToString()).Replace("DaneWsad", "DaneOut");
+                        Directory.Move(dir, newdir);
+                        i++;
+                    }
+                    cmd = "";
+                    i = 1;
+                }
+
+                if (cmd == "cros")
+                {
+                    
+                    var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneOut", "*");
+                    int allDirsCount = dirsToRemove.Count();
+                    foreach (string dir in dirsToRemove)
+                    {
+
+                        Console.WriteLine("Generacja przypadków krzyrzowych dla: " + dir);
+                        for (int i = 1; i <= allDirsCount; i++)
+                        {
+                            string curentDirNumber = dir.Split('\\').Last();
+                            if (curentDirNumber != i.ToString())
+                            {
+                                string newDir = dir + "_" + i;
+                                //Directory.CreateDirectory(newDir); //tworzymy katalogi z grup
+                                projectWorker.CopyFilesRecursively(dir, newDir);
+                                projectWorker.ClearNonImportantFiles(Path.Combine(newDir, "p\\com\\uj\\atm\\Test"));
+                                projectWorker.ClearNonImportantFiles(Path.Combine(newDir, "com\\uj\\atm\\Test"));
+                                Console.WriteLine("przenoszenie testów z " + dir.Replace(curentDirNumber, i.ToString()) + " do " + newDir);
+                                projectWorker.CopyFilesRecursively(Path.Combine(dir.Replace(curentDirNumber, i.ToString()), "p\\com\\uj\\atm\\Test"), Path.Combine(newDir, "p\\com\\uj\\atm\\Test"));
+                                projectWorker.CopyFilesRecursively(Path.Combine(dir.Replace(curentDirNumber, i.ToString()), "com\\uj\\atm\\Test"), Path.Combine(newDir, "com\\uj\\atm\\Test"));
+                            } 
+                        }
+                    }
+                    cmd = "";
+                }
 
                 cmd = Console.ReadLine();
             }

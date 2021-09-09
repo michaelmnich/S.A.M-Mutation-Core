@@ -7,6 +7,7 @@ C:\Users\micha\source\repos\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.
 D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\bin\Debug\Proj_podgorze.exe.config
 D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\bin\Debug\Proj_podgorze.exe
 D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\bin\Debug\Proj_podgorze.pdb
-D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.csprojAssemblyReference.cache
 D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.exe
 D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.pdb
+D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.csproj.AssemblyReference.cache
+D:\repos\GitHub\S.A.M-Mutation-Core\Exp_TQED\Proj_podgorze\Proj_podgorze\obj\Debug\Proj_podgorze.csproj.CoreCompileInputs.cache
