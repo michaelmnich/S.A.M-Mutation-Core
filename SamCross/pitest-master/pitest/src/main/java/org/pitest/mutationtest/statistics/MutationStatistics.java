@@ -40,6 +40,7 @@ public final class MutationStatistics {
   }
   
   public long getTotalMutations() {
+
     return this.totalMutations;
   }
 

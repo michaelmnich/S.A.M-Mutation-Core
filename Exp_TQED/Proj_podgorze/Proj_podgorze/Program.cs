@@ -20,7 +20,7 @@ namespace Proj_podgorze
             while (true)
             {
 
-                if (cmd=="dirclr")
+                if (cmd=="dirclr") //czyszczenie zbednych plików
                 {
                     var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneWsad", "*_onlinetext_");
                     foreach (string dir in dirsToRemove)
@@ -31,7 +31,7 @@ namespace Proj_podgorze
                 }
 
                 
-                if (cmd == "sub")
+                if (cmd == "sub") //podpisywanie 
                 {
                     int i = 1;
                     var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneWsad","*");
@@ -53,7 +53,7 @@ namespace Proj_podgorze
                     i = 1;
                 }
 
-                if (cmd == "cros")
+                if (cmd == "cros") //krzyrzowanie
                 {
                     
                     var dirsToRemove = projectWorker.GetAllFiles("D:\\DaneOut", "*");
@@ -80,6 +80,43 @@ namespace Proj_podgorze
                     }
                     cmd = "";
                 }
+
+
+                if (cmd == "genini") //krzyrzowanie
+                {
+                    int maxf = 8;
+                    string dir = "D:\\repos\\GitHub\\S.A.M-Mutation-Core\\SamCross\\pitest-master\\tqed";
+                    for (int i =1; i< maxf; i++)
+                    {
+
+                        // Console.WriteLine(dir);
+
+                        string text = "--classPath" + Environment.NewLine +
+                                        "D:\\\\dane\\\\" + i + "\\\\p\\\\,D:\\\\dane\\\\" + i + "\\\\p\\\\" + Environment.NewLine +
+                                        "--reportDir" + Environment.NewLine +
+                                        "D:\\\\trash\\\\" + Environment.NewLine +
+                                        "--targetClasses" + Environment.NewLine +
+                                        "com.uj.atm.common.*" + Environment.NewLine +
+                                        "--targetTests" + Environment.NewLine +
+                                        "com.uj.atm.Test.*" + Environment.NewLine +
+                                        "--sourceDirs" + Environment.NewLine +
+                                        "D:\\\\dane\\\\"+i+"\\\\";
+                        var filestream = File.Create(Path.Combine(dir, i+".ini"));
+                        Console.WriteLine(filestream.Name);
+                        using (StreamWriter fw = new StreamWriter(filestream))
+                        {
+                            fw.Write(text);
+                        }
+                        filestream.Close();
+                      
+                     
+                    }
+                    cmd = "";
+                   
+                }
+
+
+                //D:\repos\GitHub\S.A.M-Mutation-Core\SamCross\pitest-master\tqed
 
                 cmd = Console.ReadLine();
             }

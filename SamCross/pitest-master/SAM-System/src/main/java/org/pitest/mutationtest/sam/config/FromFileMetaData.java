@@ -54,8 +54,9 @@ public class FromFileMetaData implements IProjectMetaData {
                         if(i == 1){
                             if(!line.equals("")){
 
-                                _getClaspathAsAList.add(line.split(",")[0]);
-                                _getClaspathAsAList.add(line.split(",")[1]);
+                                String[] ClassPaths =  line.split(",");
+                                if(ClassPaths.length>0 && !ClassPaths[0].equals(""))_getClaspathAsAList.add(ClassPaths[0]);
+                                if(ClassPaths.length>1 && !ClassPaths[1].equals("")) _getClaspathAsAList.add(ClassPaths[1]);
                             }
                         }
                         i++;
