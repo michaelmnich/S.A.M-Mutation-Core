@@ -84,7 +84,7 @@ public class ConsoleUi implements Iui{
                             break;
 
                         case "tqed": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
-                            String strtqed = "Id;CLASS;TIME;INFO;TEST_RAN;TEST_RAN_PER_MUT;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
+                            String strtqed = "INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
 
                             List<FromFileMetaData> tqedtempDatasLocal = FromFileMetaData.GetAllFromFileMetaDataFromDir(Paths.get(System.getProperty("user.dir"),"tqed").toString());
                             //IProjectMetaData tqedtempDataLocal =new FromFileMetaData();

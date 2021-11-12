@@ -27,12 +27,15 @@ public final class MutationStatistics {
   private final long numberOfTestsRun;
   private final long totalDetected;
 
+
   public MutationStatistics(Iterable<Score> scores, long totalMutations, 
       long totalDetected, long numberOfTestsRun) {
     this.scores = scores;
     this.totalMutations = totalMutations;
     this.totalDetected = totalDetected;
     this.numberOfTestsRun = numberOfTestsRun;
+
+
   }
 
   public Iterable<Score> getScores() {

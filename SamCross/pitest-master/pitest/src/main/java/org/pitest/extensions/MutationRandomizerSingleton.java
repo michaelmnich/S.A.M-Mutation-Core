@@ -29,6 +29,7 @@ public class MutationRandomizerSingleton {
 
    // private BlockReportListner blockListner;
     public List<String> FailedTsests;
+    public SingletonMutationTotals MutationTotals;
     //Bayses------
     double _alpha=Double.NaN;
     double _betha=Double.NaN;
@@ -411,4 +412,5 @@ public class MutationRandomizerSingleton {
         public String Id;
         public String ClassName;
     }
+
 }

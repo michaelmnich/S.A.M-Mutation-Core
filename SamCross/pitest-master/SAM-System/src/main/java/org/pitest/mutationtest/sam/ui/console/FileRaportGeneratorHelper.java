@@ -37,6 +37,12 @@ public class FileRaportGeneratorHelper {
 
         java.util.HashMap<DetectionStatus,Long> mapaDanych  = new HashMap<DetectionStatus, Long>();
 
+        mapaDanych.put(DetectionStatus.NUMBER_Of_FILES,new Long(0));
+        mapaDanych.put(DetectionStatus.NUMBER_Of_LINES,new Long(0));
+        mapaDanych.put(DetectionStatus.NUMBER_Of_LINES_COVERED,new Long(0));
+        mapaDanych.put(DetectionStatus.NUMBER_Of_MUTATIONS,new Long(0));
+        mapaDanych.put(DetectionStatus.NUMBER_Of_MUTATIONS_DETECTED,new Long(0));
+
         mapaDanych.put(DetectionStatus.KILLED,new Long(0));
         mapaDanych.put(DetectionStatus.SURVIVED,new Long(0));
         mapaDanych.put(DetectionStatus.NO_COVERAGE,new Long(0));
@@ -48,6 +54,14 @@ public class FileRaportGeneratorHelper {
         mapaDanych.put(DetectionStatus.STARTED,new Long(0));
 
         String LIne="";
+        if(MutationRandomizerSingleton.getInstance().MutationTotals!=null){
+            mapaDanych.put(DetectionStatus.NUMBER_Of_FILES,MutationRandomizerSingleton.getInstance().MutationTotals.numberOfFiles);
+            mapaDanych.put(DetectionStatus.NUMBER_Of_LINES,MutationRandomizerSingleton.getInstance().MutationTotals.numberOfLines);
+            mapaDanych.put(DetectionStatus.NUMBER_Of_LINES_COVERED,MutationRandomizerSingleton.getInstance().MutationTotals.numberOfLinesCovered);
+            mapaDanych.put(DetectionStatus.NUMBER_Of_MUTATIONS,MutationRandomizerSingleton.getInstance().MutationTotals.numberOfMutations);
+            mapaDanych.put(DetectionStatus.NUMBER_Of_MUTATIONS_DETECTED,MutationRandomizerSingleton.getInstance().MutationTotals.numberOfMutationsDetected);
+        }
+
         if(MutationRandomizerSingleton.GlobalStats!=null){
 
             for (Score sorce : MutationRandomizerSingleton.GlobalStats.getScores())
@@ -91,17 +105,25 @@ public class FileRaportGeneratorHelper {
             LIne ="0;0;0;0;0;0;0;0;0;0";
         }
 
-        LIne=";"+mapaDanych.get(DetectionStatus.KILLED)+
+        LIne=";"+mapaDanych.get(DetectionStatus.NUMBER_Of_FILES)+
+                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_LINES)+
+                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_LINES_COVERED)+
+                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_MUTATIONS)+
+                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_MUTATIONS_DETECTED)+
+                ";"+mapaDanych.get(DetectionStatus.KILLED)+
                 ";"+mapaDanych.get(DetectionStatus.SURVIVED)+
                 ";"+mapaDanych.get(DetectionStatus.NO_COVERAGE)+
+                ";"+mapaDanych.get(DetectionStatus.TIMED_OUT)+
                 ";"+mapaDanych.get(DetectionStatus.MEMORY_ERROR)+
                 ";"+mapaDanych.get(DetectionStatus.RUN_ERROR)+
                 ";"+mapaDanych.get(DetectionStatus.NON_VIABLE)+
                 ";"+mapaDanych.get(DetectionStatus.NOT_STARTED)+
                 ";"+mapaDanych.get(DetectionStatus.STARTED);
 
-
-        str +=""+data.FileName+";"+ data.Classname +";"+timeElapsed.toMillis()+";OK"
+            String tempClassname ="NONE";
+            if(!data.Classname.equals(""))
+                tempClassname= data.Classname;
+            str +=""+data.FileName+";"+ tempClassname +";"+timeElapsed.toMillis()+";OK"
                 +";"+MutationRandomizerSingleton.TestRan
                 +";"+MutationRandomizerSingleton.GlobalTestsPermut
                 +LIne
@@ -109,7 +131,7 @@ public class FileRaportGeneratorHelper {
 
 
         }catch (Exception e){
-            str +=""+ data.Classname +";-1;ClassError;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1"+System.lineSeparator();
+            str +=""+ data.Classname +";-1;ClassError;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1;-1"+System.lineSeparator();
         }
         finally {
             return str;

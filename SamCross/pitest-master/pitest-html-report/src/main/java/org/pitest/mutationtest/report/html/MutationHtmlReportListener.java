@@ -18,6 +18,8 @@ import org.antlr.stringtemplate.StringTemplate;
 import org.antlr.stringtemplate.StringTemplateGroup;
 import org.pitest.classinfo.ClassInfo;
 import org.pitest.coverage.CoverageDatabase;
+import org.pitest.extensions.MutationRandomizerSingleton;
+import org.pitest.extensions.SingletonMutationTotals;
 import org.pitest.functional.F;
 import org.pitest.functional.FCollection;
 import org.pitest.functional.Option;
@@ -196,6 +198,16 @@ public class MutationHtmlReportListener implements MutationResultListener {
     }
 
     st.setAttribute("totals", totals);
+
+    SingletonMutationTotals totalsMuts  = new SingletonMutationTotals();
+    totalsMuts.numberOfFiles = totals.getNumberOfFiles();
+    totalsMuts.numberOfLines = totals.getNumberOfLines();
+    totalsMuts.numberOfLinesCovered = totals.getNumberOfLinesCovered();
+    totalsMuts.numberOfMutations = totals.getNumberOfMutations();
+    totalsMuts.numberOfMutationsDetected = totals.getNumberOfMutationsDetected();
+    MutationRandomizerSingleton.getInstance().MutationTotals = totalsMuts;
+
+
     st.setAttribute("packageSummaries", psd);
     try {
       writer.write(st.toString());

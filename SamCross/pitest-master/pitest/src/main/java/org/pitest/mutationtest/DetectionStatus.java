@@ -65,7 +65,14 @@ public enum DetectionStatus {
   /**
    * Mutation is not covered by any test.
    */
-  NO_COVERAGE(false);
+  NO_COVERAGE(false),
+
+  NUMBER_Of_FILES(false),
+  NUMBER_Of_LINES(false),
+  NUMBER_Of_LINES_COVERED(false),
+  NUMBER_Of_MUTATIONS(false),
+  NUMBER_Of_MUTATIONS_DETECTED(false);
+
 
   private final boolean detected;
 
