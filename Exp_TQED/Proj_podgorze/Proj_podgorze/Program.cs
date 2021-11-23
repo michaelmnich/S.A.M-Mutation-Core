@@ -29,8 +29,7 @@ namespace Proj_podgorze
                     }
                     cmd = "";
                 }
-
-                
+        
                 if (cmd == "sub") //podpisywanie 
                 {
                     int i = 1;
@@ -43,6 +42,8 @@ namespace Proj_podgorze
                         using (StreamWriter fw = new StreamWriter(filestream))
                         {
                             fw.Write(dir.Split('\\').Last());
+
+                            //Dopisać jeszce do jakiegoś csv plik; autor
                         }
                         filestream.Close();
                         string newdir = dir.Replace(dir.Split('\\').Last(), i.ToString()).Replace("DaneWsad", "DaneOut");
@@ -81,40 +82,48 @@ namespace Proj_podgorze
                     cmd = "";
                 }
 
-
                 if (cmd == "genini") //krzyrzowanie
                 {
                     int maxf = 8;
                     string dir = "D:\\repos\\GitHub\\S.A.M-Mutation-Core\\SamCross\\pitest-master\\tqed";
-                    for (int i =1; i< maxf; i++)
+                    IList<string> tqedFilesStudentsProjecsList = projectWorker.GetAllFiles("D:\\Dane", "*").ToList();
+                    foreach (string path  in tqedFilesStudentsProjecsList)
                     {
 
-                        // Console.WriteLine(dir);
-
-                        string text = "--classPath" + Environment.NewLine +
-                                        "D:\\\\dane\\\\" + i + "\\\\p\\\\,D:\\\\dane\\\\" + i + "\\\\p\\\\" + Environment.NewLine +
-                                        "--reportDir" + Environment.NewLine +
-                                        "D:\\\\trash\\\\" + Environment.NewLine +
-                                        "--targetClasses" + Environment.NewLine +
-                                        "com.uj.atm.common.*" + Environment.NewLine +
-                                        "--targetTests" + Environment.NewLine +
-                                        "com.uj.atm.Test.*" + Environment.NewLine +
-                                        "--sourceDirs" + Environment.NewLine +
-                                        "D:\\\\dane\\\\"+i+"\\\\";
+                        string i = path.Split('\\').Last();
                         var filestream = File.Create(Path.Combine(dir, i+".ini"));
                         Console.WriteLine(filestream.Name);
                         using (StreamWriter fw = new StreamWriter(filestream))
                         {
-                            fw.Write(text);
+                            fw.Write(projectWorker.GenerateIniBody(i+""));
                         }
                         filestream.Close();
-                      
-                     
+
                     }
                     cmd = "";
                    
                 }
 
+                if (cmd == "geninit") //krzyrzowanie
+                {
+                    int maxf = 8;
+                    string dir = "D:\\repos\\GitHub\\S.A.M-Mutation-Core\\SamCross\\pitest-master\\tqed";
+                    for (int i = 1; i < maxf; i++)
+                    {
+
+                        // Console.WriteLine(dir);
+                        var filestream = File.Create(Path.Combine(dir, i + ".ini"));
+                        Console.WriteLine(filestream.Name);
+                        using (StreamWriter fw = new StreamWriter(filestream))
+                        {
+                            fw.Write(projectWorker.GenerateIniBody(i + ""));
+                        }
+                        filestream.Close();
+
+                    }
+                    cmd = "";
+
+                }
 
                 //D:\repos\GitHub\S.A.M-Mutation-Core\SamCross\pitest-master\tqed
 

@@ -197,7 +197,7 @@ public class FromFileMetaData implements IProjectMetaData {
     public static List<FromFileMetaData> GetAllFromFileMetaDataFromDir(String MetadatasDir)
     {
         List<FromFileMetaData> ToReturn  = new ArrayList<FromFileMetaData>();
-        for (String filename: listFilesUsingJavaIO(MetadatasDir))
+        for (String filename: listFilesUsingJavaIO(MetadatasDir).stream().sorted().collect(Collectors.toList()))
         {
             ToReturn.add(new FromFileMetaData(MetadatasDir, filename));
         }

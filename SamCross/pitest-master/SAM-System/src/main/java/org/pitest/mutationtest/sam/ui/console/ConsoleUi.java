@@ -19,6 +19,7 @@ import java.time.Instant;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by gosc on 19.11.2016.
@@ -92,11 +93,14 @@ public class ConsoleUi implements Iui{
                             //Petla start p wsyztkich plikach
                             for (FromFileMetaData tqedtempDataLocal: tqedtempDatasLocal)
                             {
-                                MutationRandomizerSingleton.SetBayes = false;
-                                Instant start = Instant.now();
-                                _workerSerwer.RunnPitStandAlone(tqedtempDataLocal);
-                                Instant end = Instant.now();
-                                strtqed += FileRaportGeneratorHelper.AppendRaport((FromFileMetaData) tqedtempDataLocal,start, end);
+                                for (FromFileMetaData data:tqedtempDataLocal.GetMetaDataAsAList()) {
+                                    MutationRandomizerSingleton.SetBayes = false;
+                                    MutationRandomizerSingleton.ActualClass =data.Classname;
+                                    Instant start = Instant.now();
+                                    _workerSerwer.RunnPitStandAlone(data);
+                                    Instant end = Instant.now();
+                                    strtqed += FileRaportGeneratorHelper.AppendRaport(tqedtempDataLocal, (FromFileMetaData) data, start, end);
+                                }
                             }
                             //petla stop
                             Path path_TQED = Paths.get(System.getProperty("user.dir"), "Sonar");
@@ -104,7 +108,9 @@ public class ConsoleUi implements Iui{
                             BufferedWriter writer_TQED = new BufferedWriter(new FileWriter(f_TQED));
                             writer_TQED.write(strtqed);
                             writer_TQED.close();
-
+                            System.out.println("-----------------------------------------------------------");
+                            System.out.println("      === *** --- PROCES ZAKONCZONY --- *** === ");
+                            System.out.println("-----------------------------------------------------------");
                             break;
 
 

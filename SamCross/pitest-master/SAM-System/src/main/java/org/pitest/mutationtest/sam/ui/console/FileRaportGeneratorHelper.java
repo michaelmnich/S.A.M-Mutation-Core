@@ -19,7 +19,7 @@ import java.util.HashMap;
 public class FileRaportGeneratorHelper {
     
     
-    public static String AppendRaport(FromFileMetaData data, Instant start, Instant end)
+    public static String AppendRaport(FromFileMetaData tqedtempDataLocal, FromFileMetaData data, Instant start, Instant end)
     {
         String str = "";
         try{
@@ -109,7 +109,7 @@ public class FileRaportGeneratorHelper {
                 ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_LINES)+
                 ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_LINES_COVERED)+
                 ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_MUTATIONS)+
-                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_MUTATIONS_DETECTED)+
+                ";"+mapaDanych.get(DetectionStatus.NUMBER_Of_MUTATIONS_DETECTED)+ //to jest liczba wykrytych przez testy mutantów rózni się o tyle od liczby zabitych ze można wykryć mutanta ale zakończyć test timeoutem Wtedy mutant żyje.
                 ";"+mapaDanych.get(DetectionStatus.KILLED)+
                 ";"+mapaDanych.get(DetectionStatus.SURVIVED)+
                 ";"+mapaDanych.get(DetectionStatus.NO_COVERAGE)+
@@ -123,9 +123,10 @@ public class FileRaportGeneratorHelper {
             String tempClassname ="NONE";
             if(!data.Classname.equals(""))
                 tempClassname= data.Classname;
-            str +=""+data.FileName+";"+ tempClassname +";"+timeElapsed.toMillis()+";OK"
+
+            str +=""+tqedtempDataLocal.FileName+";"+ tempClassname +";"+timeElapsed.toMillis()+";OK"
                 +";"+MutationRandomizerSingleton.TestRan
-                +";"+MutationRandomizerSingleton.GlobalTestsPermut
+                +";"+MutationRandomizerSingleton.GlobalTestsPermut.replace('.',',')
                 +LIne
                 +System.lineSeparator();
 

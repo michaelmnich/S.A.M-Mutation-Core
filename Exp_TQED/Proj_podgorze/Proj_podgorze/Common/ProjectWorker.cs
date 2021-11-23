@@ -58,5 +58,21 @@ namespace Proj_podgorze.Common
                 File.Copy(newPath, newPath.Replace(sourcePath, targetPath), true);
             }
         }
+
+        public string GenerateIniBody(string fileName)
+        {
+            string text = "--classPath" + Environment.NewLine +
+                                        "D:\\\\dane\\\\" + fileName + "\\\\p\\\\,D:\\\\dane\\\\" + fileName + "\\\\p\\\\" + Environment.NewLine +
+                                        "--reportDir" + Environment.NewLine +
+                                        "D:\\\\trash\\\\" + Environment.NewLine +
+                                        "--targetClasses" + Environment.NewLine +
+                                        "com.uj.atm.common.Account,com.uj.atm.common.Atm,com.uj.atm.common.CreditCard,com.uj.atm.common.DummySample" + Environment.NewLine +
+                                        "--targetTests" + Environment.NewLine +
+                                        "com.uj.atm.Test.*" + Environment.NewLine +
+                                        "--sourceDirs" + Environment.NewLine +
+                                        "D:\\\\dane\\\\" + fileName + "\\\\";
+            return text;
+
+        }
     }
 }
