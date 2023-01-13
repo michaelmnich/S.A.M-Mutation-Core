@@ -6,14 +6,8 @@ import org.pitest.mutationtest.sam.config.FromFileMetaData;
 import org.pitest.mutationtest.statistics.Score;
 import org.pitest.mutationtest.statistics.StatusCount;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Calendar;
 import java.util.HashMap;
 
 public class FileRaportGeneratorHelper {
@@ -87,7 +81,8 @@ public class FileRaportGeneratorHelper {
                         mapaDanych.put(DetectionStatus.MEMORY_ERROR,mapaDanych.get(DetectionStatus.MEMORY_ERROR)+ status.getCount());
                     }
                     if(status.getStatus().equals(DetectionStatus.RUN_ERROR)){//6
-                        mapaDanych.put(DetectionStatus.RUN_ERROR,mapaDanych.get(DetectionStatus.RUN_ERROR)+ status.getCount());
+                        mapaDanych.put(DetectionStatus.RUN_ERROR,mapaDanych.get(DetectionStatus.RUN_ERROR)+ MutationRandomizerSingleton.getInstance().FailedTsests.size());
+                        MutationRandomizerSingleton.getInstance().FailedTsests.clear();
                     }
                     if(status.getStatus().equals(DetectionStatus.NON_VIABLE)){//7
                         mapaDanych.put(DetectionStatus.NON_VIABLE,mapaDanych.get(DetectionStatus.NON_VIABLE)+ status.getCount());
@@ -126,6 +121,7 @@ public class FileRaportGeneratorHelper {
 
             str +=""+tqedtempDataLocal.FileName+";"+ tempClassname +";"+timeElapsed.toMillis()+";OK"
                 +";"+MutationRandomizerSingleton.TestRan
+                +";"+"cpFromLog"
                 +";"+MutationRandomizerSingleton.GlobalTestsPermut.replace('.',',')
                 +LIne
                 +System.lineSeparator();

@@ -66,6 +66,7 @@ public class ConsoleUi implements Iui{
                             IProjectMetaData tempData =new FromFileMetaData();//i to trzeba jakos ogarnac tutaj zabawa analityczna
                             //Przed wszystkim klasy trzeba wyciac osobno i do testów ilosc klas przez ilosc nodó i wywylayac jakos
                             _workerSerwer.SendToAllConnectedNodes("PitRun", tempData);
+                            _workerSerwer.RunnPitStandAlone(tempDataLocal);
                             break;
                         case "run mutation -i":
                             //ImputMetaData(String ClassesClassPatch, String TestClassPath, String DumpDir, String ClassesStringList){

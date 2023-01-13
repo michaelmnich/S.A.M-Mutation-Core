@@ -15,22 +15,9 @@
 
 package org.pitest.coverage;
 
-import java.math.BigInteger;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.logging.Logger;
-
 import org.pitest.classinfo.ClassInfo;
 import org.pitest.classinfo.ClassName;
 import org.pitest.classpath.CodeSource;
-import org.pitest.extensions.MutationRandomizerSingleton;
 import org.pitest.functional.F;
 import org.pitest.functional.F2;
 import org.pitest.functional.FCollection;
@@ -38,6 +25,11 @@ import org.pitest.functional.Option;
 import org.pitest.functional.predicate.Predicate;
 import org.pitest.testapi.Description;
 import org.pitest.util.Log;
+
+import java.math.BigInteger;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.logging.Logger;
 
 public class CoverageData implements CoverageDatabase {
 
@@ -102,10 +94,12 @@ public class CoverageData implements CoverageDatabase {
   public void calculateClassCoverage(final CoverageResult cr) {
 
     checkForFailedTest(cr);
-    final TestInfo ti = this.createTestInfo(cr.getTestUnitDescription(),
-        cr.getExecutionTime(), cr.getNumberOfCoveredBlocks());
-    for (BlockLocation each : cr.getCoverage()) {
-      addTestsToBlockMap(ti, each);
+    if(cr.isGreenTest()){
+      final TestInfo ti = this.createTestInfo(cr.getTestUnitDescription(),
+              cr.getExecutionTime(), cr.getNumberOfCoveredBlocks());
+      for (BlockLocation each : cr.getCoverage()) {
+        addTestsToBlockMap(ti, each);
+      }
     }
   }
 
@@ -229,11 +223,11 @@ public class CoverageData implements CoverageDatabase {
   private void checkForFailedTest(final CoverageResult cr) {
     if (!cr.isGreenTest()) {
      // recordTestFailure();
-    if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains(cr.getTestUnitDescription().toString()))
-      MutationRandomizerSingleton.getInstance().FailedTsests.add(cr.getTestUnitDescription().GetTestClass_name());
-      LOG.warning(cr.getTestUnitDescription()
-          + " did not pass without mutation.");
-      System.out.println("Fail ----  "+ cr.getTestUnitDescription().GetTestClass_name());
+//    if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains(cr.getTestUnitDescription().toString()))
+//      MutationRandomizerSingleton.getInstance().FailedTsests.add(cr.getTestUnitDescription().GetTestClass_name());
+//      LOG.warning(cr.getTestUnitDescription()
+//          + " did not pass without mutation.");
+//      System.out.println("FF Fail ----  "+ cr.getTestUnitDescription().GetTestClass_name());
     }
   }
 

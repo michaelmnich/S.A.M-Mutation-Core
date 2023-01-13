@@ -14,17 +14,6 @@
  */
 package org.pitest.coverage.execute;
 
-import static org.pitest.util.Unchecked.translateCheckedException;
-
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.pitest.boot.HotSwapAgent;
 import org.pitest.classinfo.ClassName;
 import org.pitest.classpath.ClassPathByteArraySource;
@@ -39,8 +28,18 @@ import org.pitest.testapi.execute.FindTestUnits;
 import org.pitest.util.ExitCode;
 import org.pitest.util.Log;
 import org.pitest.util.SafeDataInputStream;
-
 import sun.pitest.CodeCoverageStore;
+
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static org.pitest.util.Unchecked.translateCheckedException;
 
 public class CoverageMinion {
 
@@ -149,6 +148,7 @@ public class CoverageMinion {
         .findTestUnitsForAllSuppliedClasses(FCollection.flatMap(classes,
             ClassName.nameToClass()));
     LOG.info("Found  " + tus.size() + " tests");
+    MutationRandomizerSingleton.getInstance().Foundtests = tus.size();
     return tus;
   }
 

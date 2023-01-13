@@ -19,7 +19,6 @@ import java.time.Instant;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by gosc on 19.11.2016.
@@ -78,14 +77,14 @@ public class ConsoleUi implements Iui{
                             //Przed wszystkim klasy trzeba wyciac osobno i do testów ilosc klas przez ilosc nodó i wywylayac jakos
                             _workerSerwer.SendToAllConnectedNodes("PitRun", tempData);
                             break;
-                        case "run mutation": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
+                        case "rm": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
                             IProjectMetaData tempDataLocal =new FromFileMetaData();
                             MutationRandomizerSingleton.SetBayes = false;
                             _workerSerwer.RunnPitStandAlone(tempDataLocal);
                             break;
 
                         case "tqed": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
-                            String strtqed = "INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
+                            String strtqed = "INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_FOUND;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
 
                             List<FromFileMetaData> tqedtempDatasLocal = FromFileMetaData.GetAllFromFileMetaDataFromDir(Paths.get(System.getProperty("user.dir"),"tqed").toString());
                             //IProjectMetaData tqedtempDataLocal =new FromFileMetaData();

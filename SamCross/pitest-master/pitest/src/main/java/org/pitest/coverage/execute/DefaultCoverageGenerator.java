@@ -15,14 +15,6 @@
 
 package org.pitest.coverage.execute;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.logging.Logger;
-
 import org.pitest.classinfo.ClassInfo;
 import org.pitest.classpath.CodeSource;
 import org.pitest.coverage.CoverageData;
@@ -30,6 +22,7 @@ import org.pitest.coverage.CoverageExporter;
 import org.pitest.coverage.CoverageGenerator;
 import org.pitest.coverage.CoverageResult;
 import org.pitest.coverage.analysis.LineMapper;
+import org.pitest.extensions.MutationRandomizerSingleton;
 import org.pitest.functional.F;
 import org.pitest.functional.FCollection;
 import org.pitest.functional.SideEffect1;
@@ -39,12 +32,15 @@ import org.pitest.help.PitHelpError;
 import org.pitest.process.LaunchOptions;
 import org.pitest.process.ProcessArgs;
 import org.pitest.testapi.Configuration;
-import org.pitest.util.ExitCode;
-import org.pitest.util.Log;
-import org.pitest.util.PitError;
-import org.pitest.util.SocketFinder;
-import org.pitest.util.Timings;
-import org.pitest.util.Unchecked;
+import org.pitest.util.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.logging.Logger;
 
 public class DefaultCoverageGenerator implements CoverageGenerator {
 
@@ -190,6 +186,14 @@ public class DefaultCoverageGenerator implements CoverageGenerator {
 
       @Override
       public void apply(final CoverageResult cr) {
+        if(!cr.isGreenTest()){
+          if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains(cr.getTestUnitDescription().getName()))
+            MutationRandomizerSingleton.getInstance().FailedTsests.add(cr.getTestUnitDescription().getName());
+          LOG.warning(cr.getTestUnitDescription()
+                  + " did not pass without mutation.");
+          System.out.println("FF Fail ----  "+ cr.getTestUnitDescription().getName());
+          return;
+        }
         coverage.calculateClassCoverage(cr);
         if (DefaultCoverageGenerator.this.showProgress) {
           System.out.printf("%s", this.spinner[this.i % this.spinner.length]);

@@ -2,7 +2,6 @@ package org.pitest.extensions;
 
 import org.pitest.mutationtest.DetectionStatus;
 import org.pitest.mutationtest.engine.MutationDetails;
-import org.pitest.mutationtest.report.block.BlockReportListner;
 import org.pitest.mutationtest.statistics.MutationStatistics;
 import org.pitest.mutationtest.statistics.MutationStatisticsListener;
 import org.pitest.mutationtest.statistics.Score;
@@ -11,7 +10,6 @@ import org.pitest.mutationtest.statistics.StatusCount;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
@@ -40,6 +38,7 @@ public class MutationRandomizerSingleton {
     public static int GlobalTestCount;
     public static String GlobalTestsPermut;
     public static String TestRan;
+    public static int Foundtests;
     //Bayses------
 
     //-------------------------------------------------------------------------------------------------------------

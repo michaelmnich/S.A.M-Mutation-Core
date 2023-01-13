@@ -150,10 +150,12 @@ public class MutationCoverage {
       MutationTestUnit tempunit = (MutationTestUnit) unit;
       for (ClassName ct: tempunit.testClasses) {//filtrowanie testów które nie przeszły
         // ct.toString()
+        newCt.add(ct);
         if(!MutationRandomizerSingleton.getInstance().FailedTsests.contains( ct.toString())){
         //  System.out.println("TEST : "+ ct.toString() +" FAIL ------------ Removed. Reason Red siute -------");
-          newCt.add(ct);
+
         }else{
+
           System.out.println("TEST : "+ ct.toString() +" FAIL ------------ Removed. Reason Red siute -------");
         }
       }

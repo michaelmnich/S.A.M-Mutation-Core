@@ -15,14 +15,6 @@
 
 package org.pitest.junit.adapter;
 
-import static org.pitest.util.Unchecked.translateCheckedException;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.junit.internal.builders.AllDefaultPossibilitiesBuilder;
 import org.junit.internal.runners.ErrorReportingRunner;
 import org.junit.runner.Runner;
@@ -38,6 +30,14 @@ import org.pitest.util.ClassLoaderDetectionStrategy;
 import org.pitest.util.IsolationUtils;
 import org.pitest.util.Log;
 import org.pitest.util.Unchecked;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static org.pitest.util.Unchecked.translateCheckedException;
 
 public class AdaptedJUnitTestUnit extends AbstractTestUnit {
 
