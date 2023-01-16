@@ -14,6 +14,7 @@
  */
 package org.pitest.mutationtest;
 
+import org.pitest.extensions.MutationRandomizerSingleton;
 import org.pitest.functional.Option;
 import org.pitest.mutationtest.engine.MutationDetails;
 
@@ -26,6 +27,28 @@ public final class MutationResult {
       final MutationStatusTestPair status) {
     this.details = md;
     this.status = status;
+    String statusInfo = String.valueOf(status.getKillingTest());
+   // if(!statusInfo.contains("org.pitest.functional"))
+    if(!status.getStatus().isDetected())
+    {
+      statusInfo = "NONE";
+    }
+
+      String GT_id = MutationRandomizerSingleton.FileName.replace('_',';').replaceAll(".ini","");
+      if(GT_id.length() <2){
+        GT_id = GT_id   +";" + GT_id;
+      }
+
+      MutationRandomizerSingleton.DetailReportLog+=""
+              + MutationRandomizerSingleton.FileName
+              +";" + GT_id
+              +";" + status.getStatus().name()
+              + ";"+ statusInfo
+              + ";" + md.getLineNumber()
+              + ";" + md.getFilename()
+              + ";" + md.getDescription()
+              + System.lineSeparator();
+      System.out.println("Debug Info XXO ---- Status: " + status.getStatus().name() + " File:" + MutationRandomizerSingleton.FileName + " KT: "+ statusInfo + " ln: " + md.getLineNumber() + " Class: " + md.getFilename()  +" desc: " + md.getDescription() );
   }
 
   public MutationDetails getDetails() {

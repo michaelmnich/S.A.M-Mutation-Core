@@ -85,7 +85,7 @@ public class ConsoleUi implements Iui{
 
                         case "tqed": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
                             String strtqed = "INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_FOUND;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
-
+                            MutationRandomizerSingleton.DetailReportLog = "FILE;G_CODE;G_TESTS;STATUS;TEST_KILL;MUTANT_LINE;CLASS;DESCRIPTION"+System.lineSeparator();
                             List<FromFileMetaData> tqedtempDatasLocal = FromFileMetaData.GetAllFromFileMetaDataFromDir(Paths.get(System.getProperty("user.dir"),"tqed").toString());
                             //IProjectMetaData tqedtempDataLocal =new FromFileMetaData();
                             //
@@ -95,6 +95,7 @@ public class ConsoleUi implements Iui{
                                 for (FromFileMetaData data:tqedtempDataLocal.GetMetaDataAsAList()) {
                                     MutationRandomizerSingleton.SetBayes = false;
                                     MutationRandomizerSingleton.ActualClass =data.Classname;
+                                    MutationRandomizerSingleton.FileName = tqedtempDataLocal.FileName;
                                     Instant start = Instant.now();
                                     _workerSerwer.RunnPitStandAlone(data);
                                     Instant end = Instant.now();
@@ -107,6 +108,13 @@ public class ConsoleUi implements Iui{
                             BufferedWriter writer_TQED = new BufferedWriter(new FileWriter(f_TQED));
                             writer_TQED.write(strtqed);
                             writer_TQED.close();
+
+
+                            File f_TQED_Detail = new File( path_TQED.toString(), "raport_detail.txt");
+                            BufferedWriter writer_TQED_Detail = new BufferedWriter(new FileWriter(f_TQED_Detail));
+                            writer_TQED_Detail.write(MutationRandomizerSingleton.DetailReportLog);
+                            writer_TQED_Detail.close();
+
                             System.out.println("-----------------------------------------------------------");
                             System.out.println("      === *** --- PROCES ZAKONCZONY --- *** === ");
                             System.out.println("-----------------------------------------------------------");

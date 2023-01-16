@@ -1,0 +1,109 @@
+FILE;G_CODE;G_TESTS;STATUS;TEST_KILL;MUTANT_LINE;CLASS;DESCRIPTION
+1.ini;1;1;NOT_STARTED;NONE;25;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;NONE;30;Account.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;37;Account.java;Replaced double addition with subtraction
+1.ini;1;1;NOT_STARTED;NONE;30;Account.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;38;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;NOT_STARTED;NONE;43;Account.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;50;Account.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;58;Account.java;Replaced double subtraction with addition
+1.ini;1;1;NOT_STARTED;NONE;43;Account.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;50;Account.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;59;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));50;Account.java;negated conditional
+1.ini;1;1;SURVIVED;NONE;43;Account.java;changed conditional boundary
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));58;Account.java;Replaced double subtraction with addition
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));30;Account.java;negated conditional
+1.ini;1;1;SURVIVED;NONE;59;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;SURVIVED;NONE;38;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));25;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;SURVIVED;NONE;30;Account.java;changed conditional boundary
+1.ini;1;1;SURVIVED;NONE;50;Account.java;changed conditional boundary
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));37;Account.java;Replaced double addition with subtraction
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));43;Account.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;30;Atm.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Atm::AccountStatus
+1.ini;1;1;NOT_STARTED;NONE;35;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;25;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;40;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;50;Atm.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;50;Atm.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;52;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;54;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;45;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));52;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));50;Atm.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.withdrawFunds(com.uj.atm.Test.AtmTest));45;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));50;Atm.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.checkPinAndLogIn(com.uj.atm.Test.AtmTest));25;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));35;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));54;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));40;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));30;Atm.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Atm::AccountStatus
+1.ini;1;1;NOT_STARTED;NONE;62;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;64;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;41;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;42;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;43;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;43;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;43;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;41;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;42;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;47;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;49;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;76;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;76;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;76;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;80;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;82;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;70;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;71;CreditCard.java;mutated return of Object value for com/uj/atm/common/CreditCard::GetAccount to ( if (x != null) null else throw new RuntimeException )
+1.ini;1;1;NOT_STARTED;NONE;27;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;28;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;29;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;30;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;33;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;54;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;55;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;57;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;87;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;90;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;NONE;87;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;90;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;NONE;87;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;90;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;92;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;NONE;94;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));76;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));43;CreditCard.java;negated conditional
+1.ini;1;1;SURVIVED;NONE;90;CreditCard.java;changed conditional boundary
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));43;CreditCard.java;negated conditional
+1.ini;1;1;SURVIVED;NONE;76;CreditCard.java;changed conditional boundary
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.checkPinAndLogIn(com.uj.atm.Test.AtmTest));54;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));82;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));64;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.isPinValid(com.uj.atm.Test.CreditCardTest));28;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));87;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));94;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));43;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));41;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.isPinValid(com.uj.atm.Test.CreditCardTest));29;CreditCard.java;negated conditional
+1.ini;1;1;SURVIVED;NONE;87;CreditCard.java;changed conditional boundary
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));42;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.checkPinAndLogIn(com.uj.atm.Test.AtmTest));55;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;SURVIVED;NONE;42;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.isPinValid(com.uj.atm.Test.CreditCardTest));30;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.isPinValid(com.uj.atm.Test.CreditCardTest));33;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));70;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.changePin(com.uj.atm.Test.CreditCardTest));41;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.checkPinAndLogIn(com.uj.atm.Test.AtmTest));57;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));87;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));76;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));71;CreditCard.java;mutated return of Object value for com/uj/atm/common/CreditCard::GetAccount to ( if (x != null) null else throw new RuntimeException )
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));62;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));47;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.depositFunds(com.uj.atm.Test.AtmTest));80;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));92;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.changePinCard(com.uj.atm.Test.AtmTest));49;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.isPinValid(com.uj.atm.Test.CreditCardTest));27;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.CreditCardTest.withdrawFunds(com.uj.atm.Test.CreditCardTest));90;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;Some(com.uj.atm.Test.AtmTest.transfer(com.uj.atm.Test.AtmTest));90;CreditCard.java;negated conditional

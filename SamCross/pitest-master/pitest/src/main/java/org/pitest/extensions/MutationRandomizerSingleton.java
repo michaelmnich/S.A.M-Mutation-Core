@@ -39,6 +39,8 @@ public class MutationRandomizerSingleton {
     public static String GlobalTestsPermut;
     public static String TestRan;
     public static int Foundtests;
+    public static String FileName;
+    public static String DetailReportLog;
     //Bayses------
 
     //-------------------------------------------------------------------------------------------------------------
