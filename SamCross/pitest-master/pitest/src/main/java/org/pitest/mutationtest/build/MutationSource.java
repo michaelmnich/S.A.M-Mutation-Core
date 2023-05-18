@@ -14,18 +14,21 @@
  */
 package org.pitest.mutationtest.build;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.logging.Logger;
-
 import org.pitest.classinfo.ClassByteArraySource;
 import org.pitest.classinfo.ClassName;
 import org.pitest.coverage.TestInfo;
 import org.pitest.mutationtest.MutationConfig;
+import org.pitest.mutationtest.engine.Location;
 import org.pitest.mutationtest.engine.Mutater;
 import org.pitest.mutationtest.engine.MutationDetails;
+import org.pitest.mutationtest.engine.MutationIdentifier;
 import org.pitest.mutationtest.filter.MutationFilter;
 import org.pitest.util.Log;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.logging.Logger;
 
 public class MutationSource {
 
@@ -49,25 +52,77 @@ public class MutationSource {
 
     final Mutater m = this.mutationConfig.createMutator(this.source);
 
-    final Collection<MutationDetails> availableMutations = this.filter.filter(m
-        .findMutations(clazz));
 
-    assignTestsToMutations(availableMutations);
+    Collection<MutationDetails> premadeAvailableMutations = this.filter.filter(m.findMutations(clazz));
+
+    premadeAvailableMutations = makeSplitTestsForTQED(premadeAvailableMutations);
+    //assignTestsToMutations(premadeAvailableMutations); //TEQED
+
+    final Collection<MutationDetails> availableMutations = premadeAvailableMutations;
+
+
 
     return availableMutations;
 
   }
 
-  private void assignTestsToMutations(
-      final Collection<MutationDetails> availableMutations) {
+  private void assignTestsToMutations(final Collection<MutationDetails> availableMutations) {
     for (final MutationDetails mutation : availableMutations) {
-      final List<TestInfo> testDetails = this.testPrioritiser
-          .assignTests(mutation);
+      final List<TestInfo> testDetails = this.testPrioritiser.assignTests(mutation);
       if (testDetails.isEmpty()) {
         LOG.fine("According to coverage no tests hit the mutation " + mutation);
       }
       mutation.addTestsInOrder(testDetails);
     }
   }
+
+
+  private Collection<MutationDetails> makeSplitTestsForTQED(final Collection<MutationDetails> availableMutations) {
+    Collection<MutationDetails> availableMutationsTreturn = new ArrayList<>();
+
+    for (final MutationDetails mutation : availableMutations)
+    {
+      List<TestInfo> testDetails = this.testPrioritiser.assignTests(mutation);
+
+      for(TestInfo testDetail : testDetails)
+      {
+
+        Location newLocation =
+                new Location(
+                        mutation.getId().getLocation().getClassName(),
+                        mutation.getId().getLocation().getMethodName(),
+                        mutation.getId().getLocation().getMethodDesc()
+                );
+        //newLocation.TestName = testDetail.getName();
+
+        MutationIdentifier newId  =
+                new MutationIdentifier(
+                        newLocation,
+                        mutation.getId().getFirstIndex(),
+                        mutation.getId().getMutator(),
+                        mutation.getId().getMutatorEnumName()
+                );
+
+        MutationDetails tempMutationDetails =
+                new MutationDetails(
+                        newId,
+                        mutation.getFilename(),
+                        mutation.getDescription(),
+                        mutation.getLineNumber(),
+                        mutation.getBlock(),
+                        mutation.isInFinallyBlock(),
+                        mutation.mayPoisonJVM()
+                );
+
+        availableMutationsTreturn.add(tempMutationDetails);
+        if (testDetails.isEmpty()) {
+          LOG.fine("According to coverage no tests hit the mutation " + mutation);
+        }
+        tempMutationDetails.addTestsInOrder(new ArrayList<TestInfo>() {{ add(testDetail); }} );
+      }
+    }
+    return availableMutationsTreturn;
+  }
+
 
 }

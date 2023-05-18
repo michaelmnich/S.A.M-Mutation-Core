@@ -85,7 +85,28 @@ public class ConsoleUi implements Iui{
 
                         case "tqed": //Odpalanie pojedynczej instacji pita projekt pobierany z konfiga
                             String strtqed = "INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_FOUND;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED"+System.lineSeparator();
-                            MutationRandomizerSingleton.DetailReportLog = "FILE;G_CODE;G_TESTS;STATUS;TEST_KILL;MUTANT_LINE;CLASS;DESCRIPTION"+System.lineSeparator();
+                            MutationRandomizerSingleton.DetailReportLog = "FILE;G_CODE;G_TESTS;STATUS;TEST_USED;TEST_KILL;MUTANT_LINE;CLASS;DESCRIPTION"+System.lineSeparator();
+                            /*
+                            ******* LEGENDA DO utationRandomizerSingleton.DetailReportLog *******************
+                            FILE;
+                                Nazwa pliku był wsadem został zmutowany. Przykład 1.ini
+                            G_CODE;
+                                Identyfikador kodu, Czyli z jakiego projektu pochodzi kod.Przykład "1" znaczy że kod pochodzi od użytkownika o identyfikatorze 1
+                            G_TESTS;
+                                Identyfikador kodu TESTÓW, Czyli z jakiego projektu pochodzi kod.Przykład "1" znaczy że kod TESTÓW pochodzi od użytkownika o identyfikatorze 1
+                            STATUS;
+                                Status mutanta (NOT_STARTED(niepokryty)/KILLED(zabity)/SURVIVED(żywyw)/RUN_ERROR(Test uruchomiony z błędem [UWAGA MOZE SIE NIE POJAWIĆ])
+                            TEST_USED;
+                                Nazwa testu jaki testował mutanta
+                            TEST_KILL;
+                                Nazwa testu, który zabił mutanta w przypadku gdy mutant nie zostął wykryty wartosc będzie NONE
+                            MUTANT_LINE;
+                                Identyfikador mutanta numer lini
+                            CLASS;
+                                Identyfikador mutanta klas w jakiej sie znajduje
+                            DESCRIPTION
+                                Identyfikador mutanta opis mutacji na przykład "negated conditional" lub "replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus"
+                            */
                             List<FromFileMetaData> tqedtempDatasLocal = FromFileMetaData.GetAllFromFileMetaDataFromDir(Paths.get(System.getProperty("user.dir"),"tqed").toString());
                             //IProjectMetaData tqedtempDataLocal =new FromFileMetaData();
                             //

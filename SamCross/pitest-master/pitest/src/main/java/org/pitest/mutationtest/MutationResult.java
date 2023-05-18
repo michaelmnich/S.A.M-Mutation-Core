@@ -43,6 +43,7 @@ public final class MutationResult {
               + MutationRandomizerSingleton.FileName
               +";" + GT_id
               +";" + status.getStatus().name()
+              +";" + md.getTestsInOrder().get(0).getName()
               + ";"+ statusInfo
               + ";" + md.getLineNumber()
               + ";" + md.getFilename()

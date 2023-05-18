@@ -31,10 +31,10 @@ public final class MutationStatusTestPair {
       final DetectionStatus status, final String killingTest) {
     this.status = status;
     this.killingTest = Option.some(killingTest);
-//    if(killingTest != null)
-//    {
-//      System.out.println("FF Fail ----  "+ killingTest);
-//    }
+    if(this.status.equals(DetectionStatus.KILLED) )
+    {
+      System.out.println("FF Fail ----  "+ killingTest);
+    }
 
     this.numberOfTestsRun = numberOfTestsRun;
   }
