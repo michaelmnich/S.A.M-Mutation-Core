@@ -4,21 +4,64 @@
 
 # S.A.M-Mutation-Core
 
-INFO: Project supported by IntelliJ development environment and Maven builder.
+S.A.M-Mutation-Core is a module within the S.A.M (Software Analysis and Mutation) system, designed to manage the mutation process and optimize it for software testing. Main module S.A.M-Mutation-Core stands as a pivotal component within the S.A.M (Software Analysis and Mutation) system, an innovative framework tailored to elevate software testing processes. This module is meticulously crafted to orchestrate mutation processes and augment their efficiency for rigorous software scrutiny.
 
-Main Directory: pitest-master -> Contains the Modified PiTest system and S.A.M-Mutation-Core modules,
-which manage the mutation process and optimize this process.
+## Key Objectives
 
-S.A.M-Mutation-Core/pitest-master/metadata.ini -> Configuration file for the mutation process.
+The primary objectives of S.A.M-Mutation-Core encompass:
 
-S.A.M-Mutation-Core/pitest-master/mainconfig.cfg -> Configuration file for the S.A.M and PiTest environment.
+- **Streamlined Integration**: Establishing seamless integration with popular development environments and build systems for effortless adoption and utilization.
+  
+- **Comprehensive Configuration Management**: Offering an extensive suite of configuration files to fine-tune and manage mutation processes, ensuring flexibility and adaptability to diverse testing scenarios.
 
-S.A.M-Mutation-Core/pitest-master/MutationProbabilityConfig.ini -> Configuration file for optimization
-based on Bayesian statistical inference.
+- **Enhanced Mutation Testing Capabilities**: Empowering users with the ability to conduct mutation testing across multiple files while providing comprehensive reporting functionalities to facilitate informed decision-making.
 
-Latest release: [Link to GitHub Release](https://github.com/michaelmnich/S.A.M-Mutation-Core/releases/tag/1.0)
+- **Statistical Optimization with Bayesian Inference**: Leveraging advanced statistical techniques, including Bayesian inference, to optimize mutation testing configurations and enhance testing efficiency.
 
-## Commands
+- **Seamless Compatibility with PiTest**: Ensuring compatibility with PiTest, a renowned mutation testing framework, to leverage its capabilities seamlessly and amplify the effectiveness of mutation testing processes.
+
+
+## Features
+
+- Integration with IntelliJ development environment and Maven builder.
+- Configuration files for mutation process management and optimization.
+- Support for mutation testing on multiple files with detailed reporting.
+- Bayesian statistical inference-based optimization configuration.
+- Compatibility with PiTest system.
+
+## Installation
+
+1. Clone the repository:
+
+```
+git clone https://github.com/michaelmnich/S.A.M-Mutation-Core.git
+```
+
+2. Navigate to the cloned directory:
+
+```
+cd S.A.M-Mutation-Core
+```
+
+3. Build the project using Maven:
+
+```
+mvn clean install
+```
+
+## Configuration
+
+- `metadata.ini`: Configuration file for the mutation process.
+- `mainconfig.cfg`: Configuration file for the S.A.M and PiTest environment.
+- `MutationProbabilityConfig.ini`: Configuration file for optimization based on Bayesian statistical inference.
+
+## Usage
+
+Ensure the necessary dependencies are installed, including IntelliJ and Maven. Then, follow the installation steps mentioned above.
+
+
+
+### Commands
 
 - `test`: Performs an internal test (not important).
 - `connect`: Connects to a SAM server. Prompts for server address and port.
@@ -32,3 +75,15 @@ Latest release: [Link to GitHub Release](https://github.com/michaelmnich/S.A.M-M
 - `run mutation -i`: Executes mutation testing with hardcoded input.
 - `Send`: Sends a custom message to all connected nodes.
 - `help`: Displays available commands and their descriptions.
+
+## Latest Release
+
+The latest release can be found on the [GitHub Releases](https://github.com/michaelmnich/S.A.M-Mutation-Core/releases/tag/1.0) page.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
