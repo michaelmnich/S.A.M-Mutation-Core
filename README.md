@@ -1,15 +1,12 @@
 # S.A.M-Mutation-Core
-
-INFO: Projekt wspierany przez środowisko programistyczne InteliJ oraz builder Maven.
-
-Katalog główny: pitest-master -> Zawiera Zmodyfikowany system PiTest oraz S.A.M-Mutation-Core,
-czyli moduły systemu S.A.M zarządzjące procesem mutacji oraz optymalizacją tego procesu. 
-
-S.A.M-Mutation-Core/pitest-master/metadata.ini -> Plik konfiguracyjny procesu mutacji.
-
-S.A.M-Mutation-Core/pitest-master/mainconfig.cfg -> Plik konfiguracyjny środowiska S.A.M oraz PiTest
-
-S.A.M-Mutation-Core/pitest-master/MutationProbabilityConfig.ini -> Plik konfiguracyjny optymalizacji
-opartej o bayesowskei wnioskowanie statystyczne
-
-najnowszy release: https://github.com/michaelmnich/S.A.M-Mutation-Core/releases/tag/1.0
+S.A.M. is an automated mutation testing system designed to optimize and
+manage mutation-based software testing processes. Developed for research
+purposes, its core includes modules for mutation, configuration, and network
+communication, facilitating efficient test execution and analysis. The sys-
+tem is language-agnostic, provided mutation testing framework and static
+code metric tools are available. Initially built around the PIT mutation
+testing framework, S.A.M. integrates enhanced mutation selection models,
+probability-based optimizations, and distributed computing support. Its ad-
+vancements improve software test efficiency, making it suitable for research
+and practical applications. Future developments may further refine mutation
+testing methodologies and expand real-world implementations.
