@@ -1,6 +1,6 @@
 
 
-# <img width="36" height="74" alt="images" src="https://github.com/user-attachments/assets/9fa93f6e-2803-4073-a857-135ebe2e897b" />S.A.M-Mutation-Core
+# <img width="26" height="63" alt="images" src="https://github.com/user-attachments/assets/9fa93f6e-2803-4073-a857-135ebe2e897b" />  S.A.M-Mutation-Core
 S.A.M. is an automated mutation testing system designed to optimize and
 manage mutation-based software testing processes. Developed for research
 purposes, its core includes modules for mutation, configuration, and network
