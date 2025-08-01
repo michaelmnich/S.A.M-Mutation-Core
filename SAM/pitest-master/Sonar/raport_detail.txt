@@ -1,0 +1,136 @@
+FILE;G_CODE;G_TESTS;STATUS;TEST_USED;TEST_KILL;MUTANT_LINE;CLASS;DESCRIPTION
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WithdrawFunds(com.uj.atm.Test.AtmTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.AddFoundsTest(com.uj.atm.Test.AccountTest);NONE;14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;19;Account.java;Replaced double addition with subtraction
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);NONE;19;Account.java;Replaced double addition with subtraction
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;19;Account.java;Replaced double addition with subtraction
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.AddFoundsTest(com.uj.atm.Test.AccountTest);NONE;19;Account.java;Replaced double addition with subtraction
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;20;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);NONE;20;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;20;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.AddFoundsTest(com.uj.atm.Test.AccountTest);NONE;20;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);NONE;25;Account.java;Replaced double subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;25;Account.java;Replaced double subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;25;Account.java;Replaced double subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);NONE;26;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;26;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;26;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;SURVIVED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;20;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::DepositFunds
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest));19;Account.java;Replaced double addition with subtraction
+1.ini;1;1;KILLED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);Some(com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest));25;Account.java;Replaced double subtraction with addition
+1.ini;1;1;SURVIVED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);NONE;26;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::WithdrawFunds
+1.ini;1;1;KILLED;com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest);Some(com.uj.atm.Test.AccountTest.removeFoundsTest(com.uj.atm.Test.AccountTest));14;Account.java;replaced return of double value with -(x + 1) for com/uj/atm/common/Account::AccountStatus
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;20;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndNew(com.uj.atm.Test.AtmTest);NONE;20;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;20;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest);NONE;20;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest);NONE;10;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectYes(com.uj.atm.Test.AtmTest);NONE;10;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;25;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;35;Atm.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;35;Atm.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;37;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;39;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WithdrawFunds(com.uj.atm.Test.AtmTest);NONE;30;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest));37;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.WithdrawFunds(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.WithdrawFunds(com.uj.atm.Test.AtmTest));30;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest));35;Atm.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest));10;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest));20;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest));25;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest));39;Atm.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndWrongNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndWrongNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndNew(com.uj.atm.Test.CreditCardTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndNew(com.uj.atm.Test.AtmTest);NONE;11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;13;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;13;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.GoodOldAndWrongNew(com.uj.atm.Test.CreditCardTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndGoodNew(com.uj.atm.Test.CreditCardTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WrongOldAndNew(com.uj.atm.Test.CreditCardTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndGoodNew(com.uj.atm.Test.AtmTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WrongOldAndNew(com.uj.atm.Test.AtmTest);NONE;15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);NONE;35;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;35;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);NONE;37;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.WasMoneyDeposited(com.uj.atm.Test.AtmTest);NONE;37;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest);NONE;20;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest);NONE;20;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectYes(com.uj.atm.Test.AtmTest);NONE;20;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.IsPinCorrectNo(com.uj.atm.Test.CreditCardTest);NONE;20;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest);NONE;22;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectYes(com.uj.atm.Test.AtmTest);NONE;22;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest);NONE;24;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.IsPinCorrectNo(com.uj.atm.Test.CreditCardTest);NONE;24;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;45;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);NONE;47;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.EnoughMoney(com.uj.atm.Test.AtmTest);NONE;47;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;50;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);Some(com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest));35;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest));13;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest);Some(com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest));20;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest);Some(com.uj.atm.Test.CreditCardTest.WithdrawFunds(com.uj.atm.Test.CreditCardTest));47;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.GoodOldAndWrongNew(com.uj.atm.Test.AtmTest));15;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest));45;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest);Some(com.uj.atm.Test.CreditCardTest.IsPinCorrectYes(com.uj.atm.Test.CreditCardTest));22;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;SURVIVED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest);Some(com.uj.atm.Test.CreditCardTest.WasMoneyDeposited(com.uj.atm.Test.CreditCardTest));37;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;SURVIVED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);NONE;45;CreditCard.java;changed conditional boundary
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.IsPinCorrectNo(com.uj.atm.Test.AtmTest));24;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.NotEnoughMoney(com.uj.atm.Test.AtmTest));50;CreditCard.java;replaced return of integer sized value with (x == 0 ? 1 : 0)
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest));11;CreditCard.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest);Some(com.uj.atm.Test.AtmTest.GoodOldAndGoodNew(com.uj.atm.Test.AtmTest));11;CreditCard.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;16;DummySample.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;16;DummySample.java;changed conditional boundary
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;18;DummySample.java;Replaced long subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;22;DummySample.java;Replaced long subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;22;DummySample.java;Replaced long subtraction with addition
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;14;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;14;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;16;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;16;DummySample.java;negated conditional
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);NONE;11;DummySample.java;replaced return of long value with value + 1 for com/uj/atm/common/DummySample::NWD
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;25;DummySample.java;replaced return of long value with value + 1 for com/uj/atm/common/DummySample::NWD
+1.ini;1;1;NOT_STARTED;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);NONE;25;DummySample.java;replaced return of long value with value + 1 for com/uj/atm/common/DummySample::NWD
+1.ini;1;1;TIMED_OUT;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);org.pitest.functional.Option$None@6366ebe0;16;DummySample.java;negated conditional
+1.ini;1;1;SURVIVED;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);NONE;9;DummySample.java;negated conditional
+1.ini;1;1;KILLED;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);Some(com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest));11;DummySample.java;replaced return of long value with value + 1 for com/uj/atm/common/DummySample::NWD
+1.ini;1;1;TIMED_OUT;com.uj.atm.Test.DummyTest.test02(com.uj.atm.Test.DummyTest);org.pitest.functional.Option$None@6366ebe0;9;DummySample.java;negated conditional
+1.ini;1;1;SURVIVED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;14;DummySample.java;negated conditional
+1.ini;1;1;TIMED_OUT;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);org.pitest.functional.Option$None@6366ebe0;22;DummySample.java;Replaced long subtraction with addition
+1.ini;1;1;SURVIVED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);NONE;16;DummySample.java;changed conditional boundary
+1.ini;1;1;KILLED;com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest);Some(com.uj.atm.Test.DummyTest.test03(com.uj.atm.Test.DummyTest));25;DummySample.java;replaced return of long value with value + 1 for com/uj/atm/common/DummySample::NWD
+1.ini;1;1;TIMED_OUT;com.uj.atm.Test.DummyTest.test01(com.uj.atm.Test.DummyTest);org.pitest.functional.Option$None@6366ebe0;18;DummySample.java;Replaced long subtraction with addition

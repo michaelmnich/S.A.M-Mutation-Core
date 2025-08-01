@@ -1,0 +1,3 @@
+matrixlibrary\IMatrixMath.class
+matrixlibrary\InvalidDimensionException.class
+matrixlibrary\IMatrix.class
