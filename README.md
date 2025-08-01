@@ -22,6 +22,20 @@ Configuration parameters can be specified within dedicated configuration files t
 The path to project dependencies targeted for mutation is defined in the metadata.ini file.
 ### Configuration shema
 ```
+--classPath
+Drive:\\HelloWorldExample\\p\\,Drive:\\HelloWorldExample\\p\\
+--reportDir
+Drive:\\reports\\
+--targetClasses
+com.uj.atm.common.Account,com.uj.atm.common.Atm,com.uj.atm.common.CreditCard,com.uj.atm.common.DummySample
+--targetTests
+com.uj.atm.Test.*
+--sourceDirs
+Drive:\\HelloWorldExample\\
+```
+
+### Configuration Example
+```
 run mutation -i 
 --classPath 
 D:\\<dir>\\PitPlayground\\IOgr602-master\\target\\test-classes\\,D:\\<dir>\\PitPlayground\\IOgr602-master\\target\\classes\\
@@ -33,20 +47,6 @@ matrixlibrary.*
 matrixlibrary.* 
 --sourceDirs 
 D:\\<dir>\\PitPlayground\\IOgr602-master\\
-```
-
-### Configuration Example
-```
---classPath
-Drive:\\HelloWorldExample\\p\\,Drive:\\HelloWorldExample\\p\\
---reportDir
-Drive:\\reports\\
---targetClasses
-com.uj.atm.common.Account,com.uj.atm.common.Atm,com.uj.atm.common.CreditCard,com.uj.atm.common.DummySample
---targetTests
-com.uj.atm.Test.*
---sourceDirs
-Drive:\\HelloWorldExample\\
 ```
 
 Environment variables relevant to the mutation process are configured in the mainconfig.cfg file.
