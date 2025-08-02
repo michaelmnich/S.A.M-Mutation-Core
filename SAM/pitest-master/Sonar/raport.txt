@@ -1,5 +1,5 @@
 INPUT_CFG;CLASS;TIME;INFO;TEST_RAN;TEST_FOUND;TEST_RAN_PER_MUT;NUMBER_Of_FILES;NUMBER_Of_LINES;NUMBER_Of_LINES_COVERED;NUMBER_Of_MUTATIONS;NUMBER_Of_MUTATIONS_DETECTED;KILLED;SURVIVED;NO_COVERAGE;TIMED_OUT;MEMORY_ERRORRUN_ERROR;RUN_ERROR;NON_VIABLE;NOT_STARTED;STARTED
-1.ini;com.uj.atm.common.Account;1286;OK;5;cpFromLog;1;1;9;9;5;3;3;2;0;0;0;0;0;0;0
-1.ini;com.uj.atm.common.Atm;833;OK;7;cpFromLog;1;1;10;9;7;7;7;0;0;0;0;0;0;0;0
-1.ini;com.uj.atm.common.CreditCard;897;OK;14;cpFromLog;1;1;20;19;14;12;12;2;0;0;0;0;0;0;0
-1.ini;com.uj.atm.common.DummySample;17990;OK;5;cpFromLog;0,56;1;8;8;9;6;2;3;0;4;0;0;0;0;0
+1.ini;com.uj.atm.common.Account;1357;OK;5;cpFromLog;1;1;9;9;5;3;3;2;0;0;0;0;0;0;0
+1.ini;com.uj.atm.common.Atm;856;OK;7;cpFromLog;1;1;10;9;7;7;7;0;0;0;0;0;0;0;0
+1.ini;com.uj.atm.common.CreditCard;903;OK;14;cpFromLog;1;1;20;19;14;13;13;1;0;0;0;0;0;0;0
+1.ini;com.uj.atm.common.DummySample;17951;OK;5;cpFromLog;0,56;1;8;8;9;6;2;3;0;4;0;0;0;0;0

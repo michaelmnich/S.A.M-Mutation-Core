@@ -31,12 +31,12 @@ public class FromFileMetaData implements IProjectMetaData {
     }
 
     public FromFileMetaData(String path) {
-        this(System.getProperty("user.dir"), "metadata.ini");
+        this(path, "metadata.ini");
     }
 
     public FromFileMetaData(String dir, String configFile)  {
         try {
-
+            System.out.println("running cfg file: '"+configFile+"'  from location: "+dir);
             File f =new File(dir,configFile);
             FileName = f.getName();
             if(f.isFile()){
@@ -108,6 +108,7 @@ public class FromFileMetaData implements IProjectMetaData {
 
     public FromFileMetaData(String dir, String configFile, boolean bayes)  {
         try {
+            System.out.println("running cfg file: '"+configFile+"'  from location: "+dir);
             File f =new File(dir,configFile);
             if(f.isFile()){
                 BufferedReader br = new BufferedReader(new FileReader(f));
