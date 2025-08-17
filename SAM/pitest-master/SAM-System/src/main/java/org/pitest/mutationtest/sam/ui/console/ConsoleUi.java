@@ -29,6 +29,7 @@ public class ConsoleUi implements Iui{
     private  boolean  _isOn;
     private static Object _lock;
     private BufferedReader _cnsl;
+    private String _argCmd;
 
     //Comands Strings-------------------------------
 
@@ -46,6 +47,16 @@ public class ConsoleUi implements Iui{
         _isOn = true;
         _lock = new Object();
         _cnsl = new BufferedReader(new InputStreamReader(System.in));
+
+    }
+
+    // Additional constructor with String parameter
+    public ConsoleUi(WebSocketWorkerNode workerSerwer, String argCmd) {
+        this(workerSerwer); // Call the existing constructor
+        _argCmd = argCmd;
+    }
+
+    public void InitRUnCMC(){
         Runnable consoleImput = () -> {consoleImmputTask();};
         consoleImput.run();
     }
@@ -55,7 +66,18 @@ public class ConsoleUi implements Iui{
             synchronized (_lock){
                 System.out.println(CCS_start);
                 while (_isOn){
-                        String comand = _cnsl.readLine();
+
+                    String comand = "help";
+
+                    if (_argCmd == null || _argCmd.trim().isEmpty()) {
+                        //System.out.println("DEBUG: Command Line Mode");
+                        comand = _cnsl.readLine();
+                    }else{
+                        //System.out.println("DEBUG: Java Args Mode");
+                        comand = _argCmd;
+                        _isOn = false;
+                    }
+
                     switch (comand) {
                         case "test":
                            System.out.println("Test wykonany");

@@ -12,5 +12,6 @@ public interface Iui {
     public void startSerwer(int port);
     public void connectTo(String adress, int port);
     public void runnPit(IProjectMetaData data);
+    public void InitRUnCMC();
 
 }

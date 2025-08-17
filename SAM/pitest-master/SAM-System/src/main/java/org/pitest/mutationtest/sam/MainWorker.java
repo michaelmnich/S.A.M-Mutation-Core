@@ -17,6 +17,7 @@ package org.pitest.mutationtest.sam;
 import org.pitest.mutationtest.sam.ui.Iui;
 import org.pitest.mutationtest.sam.ui.console.ConsoleUi;
 import org.pitest.mutationtest.sam.web.WebSocketWorkerNode;
+import java.util.Arrays;
 /**
  * Created by Michał Mnich on 25.10.2016.
  */
@@ -27,10 +28,25 @@ public class MainWorker {
 
     if(args.length ==0){
       Iui ui = new ConsoleUi(workerSerwer);
-    }else
+      ui.InitRUnCMC();
+    }
+    else
     {
       if(args[0]!=null){
-        if(args[0].equals("worker_up:") ) workerSerwer.Start(Integer.valueOf(args[1]));
+
+        // You can now use argCmd as needed
+        System.out.println("Received command argument: " + Arrays.toString(args));
+        // Optionally, pass argCmd to consoleImmputTask or store it
+        //System.out.println("debug Test:"+args[0]);
+        //System.out.println("debug Test:"+args[1]);
+
+        if(args[0].equals("worker_up:") ) {
+          workerSerwer.Start(Integer.valueOf(args[1]));
+        }
+        else if(args[0].equals("arg_cmd") ) {
+          Iui ui = new ConsoleUi(workerSerwer,args[1]);
+          ui.InitRUnCMC();
+        }
       }
     }
 
